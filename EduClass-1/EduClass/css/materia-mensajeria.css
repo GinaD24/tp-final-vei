@@ -1,0 +1,93 @@
+.badge {
+    background: #5a7edc;
+    color: white;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+
+/* ===== LISTA DE MENSAJES ===== */
+.mensajes-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Tarjeta de mensaje */
+.mensaje-card {
+    background: #f9f9f9;
+    border: 1px solid #dedede;
+    border-radius: 10px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.mensaje-card:hover {
+    background: #f1f1f1;
+     border-color: #cacaca;
+}
+
+
+.mensaje-card.no-leido {
+    background: #ebeaea; 
+    border-color: #c0c0c0;
+    font-weight: bold;
+}
+
+.mensaje-card.no-leido:hover {
+    background: #e6e6e6;
+     border-color: #888888;
+}
+
+
+.mensaje-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mensaje-info.no-leido {    
+    font-weight: bold;
+    
+}
+
+/* Emisor */
+.mensaje-info .emisor {
+    width: 100px;  
+    font-size: 16px;
+    margin: 0;
+    margin-right: -20px;
+}
+
+/* Asunto */
+.mensaje-info .asunto {
+    font-size: 15px;
+    margin: 0;
+    border-left: 1px solid #919191;
+    padding-left: 12px;
+}
+
+
+
+/* Fecha */
+.fecha {
+    font-size: 15px;
+}
+
+.fecha-e-icono{
+    display: flex;
+    gap: 10px;
+}
+
+.icono-responder-mensaje{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}

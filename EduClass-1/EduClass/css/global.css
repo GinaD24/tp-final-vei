@@ -136,6 +136,66 @@ a {
 
 }
 
+/* ---------------- BARRA LATERAL EN MATERIA  ---------------- */
+.submenu .desplegable {
+  width: 100%;
+  background: #bcc9d6;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.submenu-contenido {
+  list-style: none;
+  display: none; 
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.submenu-contenido.abierto {
+  display: flex !important;
+}
+
+.materia-activa {
+  background: #97bff0a8;
+  padding: 6px 40px;
+  border-radius: 25px;
+  border: 2px solid #3c609b;
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.submenu-item {
+  padding: 7px 0;
+  display: block;
+  color: #000;
+  justify-content: center;
+}
+
+.submenu-item.activo {
+  font-weight: bold;
+  padding-bottom: 10px; 
+  position: relative;  
+}
+
+.submenu-item.activo::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 50%;         
+  height: 3px;        
+  background-color: #5a7edc;
+  transform: translateX(-50%); 
+  border-radius: 2px;  
+}
 /* ---------------- PIE DE PÁGINA  ---------------- */
 .pie {
     padding: 20px;

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Materia</title>
+    <link rel="icon" href="../educlass.png" type="image/x-icon" />
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/materia.css" />
+</head>
+
+<body>
+    <div class="main-container">
+
+        <header class="encabezado"></header>
+        <div class="contenedor">
+
+            <aside class="barra-lateral" id="sidebar"></aside>
+
+            <main class="contenido-materia">
+
+                <section class="header-materia">
+                    <div>
+                        <h1 class="nombre-materia">BIOLOGÍA</h1><br>
+                        <p class="info-materia">Tercer trimestre - 2025</p>
+                    </div>
+                    
+                </section>
+
+                <!-- Tabs -->
+                <nav class="tabs">
+                    <button class="tab active">Todas</button>
+                    <button class="tab">Pendientes</button>
+                    <button class="tab">Entregadas</button>
+                </nav>
+
+                <!-- Lista de actividades -->
+                <section class="lista-actividades">
+
+                    <article class="actividad-card">
+                        <div class="actividad-info">
+                            <img src="../img/icono-actividad.png"class="icono-actividad">
+                            <span>Actividad n°3 - Unidad 3 - Sistema Nervioso</span>
+                        </div>
+                        <button class="btn-realizar">Realizar tarea</button>
+                    </article>
+
+                    <article class="actividad-card">
+                        <div class="actividad-info">
+                            <img src="../img/icono-actividad.png"class="icono-actividad">
+                            <span>Actividad n°2 - Unidad 2 - Sistema Digestivo</span>
+                        </div>
+                        <span class="estado-actividad">Entregada ✔</span>
+                    </article>
+
+                    <article class="actividad-card">
+                        <div class="actividad-info">
+                            <img src="../img/icono-actividad.png"class="icono-actividad">
+                            <span>Actividad n°1 - Unidad 1 - Sistema Circulatorio</span>
+                        </div>
+                        <span class="estado-actividad tarde">Entregada con retraso</span>
+                    </article>
+
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+     <footer class="pie"></footer>
+
+     <!-- SCRIPTS PARA CARGAR BARRA LATERAL -->
+    <script src="../js/sidebar-loader.js"></script>
+    <script src="../js/header-loader.js"></script>
+    <script src="../js/footer-loader.js"></script>
+</body>
+</html>
