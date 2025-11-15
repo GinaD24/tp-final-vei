@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --header-height: 60px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    max-width: 100%;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+/* ---------------- ENCABEZADO ---------------- */
+
+.encabezado {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: inherit;
+    border-bottom: 1px solid #c2deff;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo img {
+    max-height: 160px;
+    object-fit: cover;
+}
+
+.perfil img {
+    width: 35px;
+    cursor: pointer;
+}
+
+/* ---------------- CONTENIDO PRINCIPAL ---------------- */
+.contenedor {
+    padding-left: 200px;
+    height: calc(100vh - var(--header-height));
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.contenido {
+    width: 100%;
+    padding: 20px 40px;
+    margin-top: var(--header-height);
+}
+
+/* ---------------- BARRA LATERAL ---------------- */
+
+.barra-lateral {
+    width: 200px;
+    flex-shrink: 0;
+    background: #d8e0ea;
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    overflow-y: auto;
+}
+
+
+.lista-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.item-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.item-menu img {
+    width: 18px;
+}
+
+.item-menu.activo {
+    background: #bcc9d6;
+}
+
+.item-menu:hover {
+    background: #c8d4e0;
+}
+
+.flecha {
+    margin-left: auto;
+    width: 12px;
+}
+
+.ajustes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+}
+
+.ajustes img {
+    width: 18px;
+
+}
+
+/* ---------------- PIE DE PÁGINA  ---------------- */
+.pie {
+    padding: 20px;
+    text-align: center;
+    background-color: inherit;
+    border-top: 1px solid #c2deff;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+    .contenedor {
+        padding-left: 52px;
+    }
+
+    .encabezado {
+        padding: 5px;
+    }
+
+    .barra-lateral {
+        width: fit-content;
+        max-width: 52px;
+        padding: 15px 5px;
+    }
+
+    .item-menu span,
+    .ajustes span {
+        display: none;
+    }
+
+    .contenido {
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .encabezado {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
