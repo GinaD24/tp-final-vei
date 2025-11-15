@@ -8,7 +8,34 @@ document.addEventListener("DOMContentLoaded", async function () {
         const sidebarHTML = await res.text();
         template.innerHTML = sidebarHTML;
         sidebar.appendChild(template.content);
+
+        activarSideBar();
+        
     } catch (error) {
         console.error("Error cargando sidebar:", error);
     }
 });
+
+function activarSideBar(){
+    const tienda = document.getElementById("tienda");
+    const home = document.getElementById("home");
+    const calendario = document.getElementById("calendario");
+    const asignatura = document.getElementById("asignatura");
+
+    tienda.classList.remove("activo");
+    home.classList.remove("activo");
+    calendario.classList.remove("activo");
+    asignatura.classList.remove("activo");
+
+        if (window.location.pathname.includes("tienda")) {
+            tienda.classList.add("activo");
+        }
+        else if (window.location.pathname.includes("calendario")){
+            calendario.classList.add("activo");
+        }
+        else if(window.location.pathname.includes("asignatura")){
+            asignatura.classList.add("activo");
+        } else{
+            home.classList.add("activo");
+        }
+}
