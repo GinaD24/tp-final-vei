@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", async function () {
             SIDEBAR_PATH = "./partials/sidebar-materia.html";
         }
 
+                if (path.includes("actividad.html")) {
+            SIDEBAR_PATH = "./partials/sidebar-materia.html";
+        }
+
           if (path.includes("materia-mensajeria.html")) {
             SIDEBAR_PATH = "./partials/sidebar-materia-mensajeria.html";
         }
