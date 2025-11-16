@@ -246,7 +246,6 @@ a {
 
 @media (max-width: 480px) {
     .encabezado {
-        flex-direction: row;
         gap: 10px;
     }
 }
