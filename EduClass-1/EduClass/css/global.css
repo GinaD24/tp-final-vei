@@ -206,6 +206,7 @@ a {
 
 /* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 768px) {
+
     .contenedor {
         padding-left: 52px;
     }
@@ -220,6 +221,7 @@ a {
         padding: 15px 5px;
     }
 
+
     .item-menu span,
     .ajustes span {
         display: none;
@@ -228,12 +230,23 @@ a {
     .contenido {
         padding: 20px;
     }
+
+    /*sub menu materia*/
+
+    .materia-activa{
+        display: none;
+    }
+
+    .submenu-item {
+        display: none;
+    }
+
 }
 
 
 @media (max-width: 480px) {
     .encabezado {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
     }
 }

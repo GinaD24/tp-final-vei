@@ -1,27 +1,26 @@
 .badge {
     background: #5a7edc;
     color: white;
-    border-radius: 12px;
-    padding: 2px 8px;
-    font-size: 12px;
-    margin-left: 5px;
+    border-radius: 0.75rem; /* 12px */
+    padding: 0.125rem 0.5rem; /* 2px 8px */
+    font-size: 0.75rem; /* 12px */
+    margin-left: 0.3125rem; /* 5px */
 }
-
 
 /* ===== LISTA DE MENSAJES ===== */
 .mensajes-lista {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 0.9375rem; /* 15px */
+    margin-top: 1.25rem; /* 20px */
 }
 
 /* Tarjeta de mensaje */
 .mensaje-card {
     background: #f9f9f9;
     border: 1px solid #dedede;
-    border-radius: 10px;
-    padding: 15px 20px;
+    border-radius: 0.625rem; /* 10px */
+    padding: 0.9375rem 1.25rem; /* 15px 20px */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,64 +29,90 @@
 
 .mensaje-card:hover {
     background: #f1f1f1;
-     border-color: #cacaca;
+    border-color: #cacaca;
 }
 
-
 .mensaje-card.no-leido {
-    background: #ebeaea; 
+    background: #ebeaea;
     border-color: #c0c0c0;
     font-weight: bold;
 }
 
 .mensaje-card.no-leido:hover {
     background: #e6e6e6;
-     border-color: #888888;
+    border-color: #888888;
 }
-
 
 .mensaje-info {
     display: flex;
-    gap: 20px;
+    gap: 1.25rem; /* 20px */
     align-items: center;
     justify-content: space-between;
 }
 
-.mensaje-info.no-leido {    
+.mensaje-info.no-leido {
     font-weight: bold;
-    
 }
 
 /* Emisor */
 .mensaje-info .emisor {
-    width: 100px;  
-    font-size: 16px;
+    width: 6.25rem; /* 100px */
+    font-size: 1rem; /* 16px */
     margin: 0;
-    margin-right: -20px;
+    margin-right: -1.25rem; /* -20px */
 }
 
 /* Asunto */
 .mensaje-info .asunto {
-    font-size: 15px;
+    font-size: 0.9375rem; /* 15px */
     margin: 0;
-    border-left: 1px solid #919191;
-    padding-left: 12px;
+    border-left: 0.125rem solid #919191; /* 2px */
+    padding-left: 0.75rem; /* 12px */
 }
-
-
 
 /* Fecha */
 .fecha {
-    font-size: 15px;
+    font-size: 0.9375rem; /* 15px */
 }
 
-.fecha-e-icono{
+.fecha-e-icono {
     display: flex;
-    gap: 10px;
+    gap: 0.625rem; /* 10px */
 }
 
-.icono-responder-mensaje{
-    width: 20px;
-    height: 20px;
+.icono-responder-mensaje {
+    width: 1.25rem; /* 20px */
+    height: 1.25rem;
     cursor: pointer;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .mensaje-card {
+        padding: 0.75rem 1rem; /* reduce padding */
+    }
+
+    .mensaje-info {
+        gap: 0.75rem; /* reduce espacio */
+    }
+
+    .mensaje-info .emisor {
+        width: 6rem; /* 80px */
+        font-size: 0.875rem; /* 14px */
+    }
+
+    .mensaje-info .asunto {
+        font-size: 0.875rem; /* 14px */
+        padding-left: 0.5rem; /* 8px */
+    }
+
+    .fecha {
+        font-size: 0.8125rem; /* 13px */
+    }
+
+    .icono-responder-mensaje {
+        width: 1rem;  /* 16px */
+        height: 1rem;
+    }
 }
