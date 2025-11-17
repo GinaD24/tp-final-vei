@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduClass - Calendario Escolar</title>
+    <link rel="stylesheet" href="/EduClass-1/EduClass/css/CalendarioEstilos.css">
+</head>
+<body>
+
+<header class="topbar">
+    <img src="/EduClass-1/EduClass/img/menu.png" alt="Menu" class="menu-hamburguesa">
+
+    <div class="logo">
+        <img src="/EduClass-1/EduClass/img/EduClass-logo.png" alt="EduClass" class="logo-img">
+        <span>EduClass</span>
+    </div>
+
+    <div class="top-icons">
+        <img src="/EduClass-1/EduClass/img/mingcute--notification-fill.png" alt="Notificaciones" class="icon-img">
+        <img src="/EduClass-1/EduClass/img/usuario.png" alt="Usuario" class="icon-img">
+    </div>
+</header>
+
+<aside class="sidebar">
+    <img src="/EduClass-1/EduClass/img/home.png" alt="Inicio" class="menu-img">
+    <img src="/EduClass-1/EduClass/img/calendario.png" alt="Calendario" class="menu-img">
+    <img src="/EduClass-1/EduClass/img/estrella.png" alt="Favoritos" class="menu-img">
+    <img src="/EduClass-1/EduClass/img/asignatura.png" alt="Configuración" class="menu-img">
+
+    
+</aside>
+
+  <div class="leyenda-asistencias" id="leyendaAsistencias">
+            <h3>Tipos de asistencia</h3>
+            <div class="leyenda-item"><span class="dot presente"></span> Presente</div>
+            <div class="leyenda-item"><span class="dot ausente"></span> Ausente</div>
+            <div class="leyenda-item"><span class="dot tarde"></span> Llegó tarde</div>
+            <div class="leyenda-item"><span class="dot justificada"></span> Justificada</div>
+      </div>
+
+
+<main class="content">
+
+    <h2 class="titulo-calendario">CALENDARIO ESCOLAR</h2>
+
+    <select class="filtro" id="filtroCalendario">
+        <option value="">Filtra acá</option>
+        <option value="fechaEntrega">Fecha de entrega</option>
+        <option value="fechaEvaluaciones">Fecha evaluaciones</option>
+        <option value="asistencias">Asistencias</option>
+    </select>
+
+    <!-- 🔹 CONTENEDOR DEL CALENDARIO -->
+    <section class="calendar">
+
+        <div class="calendar-header">
+            <h2 class="mes">ABRIL</h2>
+        </div>
+
+        <table class="tabla-calendario">
+            <thead>
+            <tr>
+                <th>LUNES</th>
+                <th>MARTES</th>
+                <th>MIÉRCOLES</th>
+                <th>JUEVES</th>
+                <th>VIERNES</th>
+                <th>SÁBADO</th>
+                <th>DOMINGO</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td id="d30">30</td>
+                <td id="d31">31</td>
+                <td id="d1">1</td>
+                <td id="d2">2</td>
+                <td id="d3">3</td>
+                <td id="d4">4</td>
+                <td id="d5">5</td>
+            </tr>
+            <tr>
+                <td id="d6">6</td>
+                <td id="d7">7</td>
+                <td id="d8">8</td>
+                <td id="d9">9</td>
+                <td id="d10">10</td>
+                <td id="d11">11</td>
+                <td id="d12">12</td>
+            </tr>
+            <tr>
+                <td id="d13">13</td>
+                <td id="d14">14</td>
+                <td id="d15">15</td>
+                <td id="d16">16</td>
+                <td id="d17">17</td>
+                <td id="d18">18</td>
+                <td id="d19">19</td>
+            </tr>
+            <tr>
+                <td id="d20">20</td>
+                <td id="d21">21</td>
+                <td id="d22">22</td>
+                <td id="d23">23</td>
+                <td id="d24">24</td>
+                <td id="d25">25</td>
+                <td id="d26">26</td>
+            </tr>
+            <tr>
+                <td id="d27">27</td>
+                <td id="d28">28</td>
+                <td id="d29">29</td>
+                <td id="d30b">30</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    </section>
+
+</main>
+
+<script src="/EduClass-1/EduClass/js/calendario.js"></script>
+
+</body>
+</html>

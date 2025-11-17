@@ -1,0 +1,294 @@
+/* ------------------------------ */
+/* ESTILOS GENERALES */
+/* ------------------------------ */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #1e1e26;
+    color: white;
+}
+
+
+/* ------------------------------ */
+/* TOPBAR */
+/* ------------------------------ */
+
+.topbar {
+    width: 100%;
+    height: 60px;
+    background: #111827;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    border-bottom: 2px solid #2c2f3a;
+    box-sizing: border-box;
+}
+
+.menu-hamburguesa {
+    width: 28px;
+    height: auto;
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 38px;
+    height: auto;
+}
+
+.logo span {
+    color: #4da3ff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.top-icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.icon-img {
+    width: 28px;
+    height: auto;
+    cursor: pointer;
+}
+
+
+/* ------------------------------ */
+/* SIDEBAR */
+/* ------------------------------ */
+
+.sidebar {
+    width: 75px;
+    background: #273142;
+    height: calc(100vh - 60px);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding-top: 20px;
+}
+
+.menu-img {
+    width: 32px;
+    height: auto;
+    cursor: pointer;
+    filter: brightness(0.85);
+    transition: 0.2s ease;
+}
+
+.menu-img:hover {
+    filter: brightness(1);
+}
+
+
+/* ------------------------------ */
+/* CONTENIDO */
+/* ------------------------------ */
+
+.content {
+    margin-left: 100px;
+    padding: 30px;
+}
+
+.titulo-calendario {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.filtro {
+    background: #2f3748;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+
+
+/* ------------------------------ */
+/* CALENDARIO */
+/* ------------------------------ */
+
+.calendar {
+    background: #181d27;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid #2c2f3a;
+}
+
+.mes {
+    text-align: center;
+    color: #4da3ff;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.tabla-calendario {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-calendario th {
+    padding: 12px;
+    text-align: center;
+    color: #d7d7d7;
+    font-size: 13px;
+    background: #1f2530;
+}
+
+.tabla-calendario td {
+    padding: 18px;
+    text-align: center;
+    border: 1px solid #2c2f3a;
+    background: #202631;
+    font-size: 16px;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+.tabla-calendario td:hover {
+    background: #2e3544;
+    cursor: pointer;
+}
+
+
+/* ------------------------------ */
+/* EVENTOS ESTILO TARJETAS */
+/* ------------------------------ */
+
+.info {
+    margin-top: 8px;
+    padding: 6px 8px;
+    font-size: 12px;
+    border-radius: 6px;
+    text-align: left;
+    color: #fff;
+    line-height: 1.2;
+    background: #222;
+}
+
+.info strong {
+    font-size: 13px;
+    color: #fff;
+}
+
+
+/* ------------------------------ */
+/* COLORES SEGÚN TIPO */
+/* ------------------------------ */
+
+/* Evaluaciones → rojo */
+.evaluacion .info {
+    background: #d9534f;
+    border-left: 4px solid #ff6f6a;
+}
+
+/* Entregas → azul */
+.entrega .info {
+    background: #0275d8;
+    border-left: 4px solid #62b3ff;
+}
+
+/* Hover */
+.evaluacion:hover,
+.entrega:hover {
+    background-color: #2e3544 !important;
+}
+
+/* ------------------------------ */
+/* ASISTENCIAS (BOLITAS) */
+/* ------------------------------ */
+
+.asistencia-dia {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6px auto 0 auto;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    cursor: default;
+    transition: transform 0.2s ease;
+}
+
+.asistencia-dia:hover {
+    transform: scale(1.15);
+}
+
+/* Colores */
+.presente {
+    background: #4CAF50; /* verde */
+}
+
+.ausente {
+    background: #d9534f; /* rojo */
+}
+
+.tarde {
+    background: #f0ad4e; /* naranja */
+}
+
+.justificada {
+    background: #5bc0de; /* celeste */
+}
+
+/* ------------------------------ */
+/* LEYENDA DE ASISTENCIAS */
+/* ------------------------------ */
+
+.leyenda-asistencias {
+    background: #181d27;
+    padding: 15px 18px;
+    border-radius: 10px;
+    border: 2px solid #2c2f3a;
+    width: 200px;
+    height: 120px;
+    margin-bottom: 50px; 
+      /* queda debajo de la tabla */
+    float: right;           /* la manda a la derecha dentro del calendario */
+    display: none;          /* oculto al inicio */
+}
+
+.leyenda-asistencias h3 {
+    font-size: 15px;
+    color: #4da3ff;
+    margin-top: 0;
+   
+    margin-bottom: 20px;
+}
+
+.leyenda-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.dot.presente { background: #4CAF50; }
+.dot.ausente { background: #d9534f; }
+.dot.tarde { background: #f0ad4e; }
+.dot.justificada { background: #5bc0de; }
