@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -131,3 +132,138 @@ body {
     text-align: left;
   }
 }
+=======
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #eaeaea;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 16px 24px 16px 30px;
+  background-color: #eaeaea;
+  border-bottom: 1px solid #97a8be;
+}
+
+.logo {
+  height: 170px;
+  margin-top: -50px;
+  margin-bottom: -50px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80px 40px;
+}
+
+.info {
+  color: #5578ac;
+  max-width: 400px;
+}
+
+.info h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.info p {
+  font-size: 30px;
+  line-height: 1.6;
+}
+
+.login-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  width: 400px;
+  height: 350px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.login-card h3 {
+  text-align: center;
+  color: #5578ac;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.login-card label {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #333;
+}
+
+.login-card input {
+  margin-top: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.forgot {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #6f92c5;
+  text-decoration: none;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  margin-top: 30px;
+  background-color: #6f92c5;
+  color: white;
+  border: 2px solid #5578ac;
+  border-radius: 20px;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #5f81b3;
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .info {
+    max-width: 90%;
+  }
+
+  .info h2 {
+    font-size: 40px;
+  }
+
+  .info p {
+    font-size: 25px;
+  }
+
+  .login-card {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 330px;
+  }
+  .login-card label {
+    text-align: left;
+  }
+}
+>>>>>>> eefa230b5ea047fd948735a22e58a4a547468fd0

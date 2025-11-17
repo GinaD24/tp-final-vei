@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* GENERAL */
 body {
     margin: 0;
@@ -239,3 +240,246 @@ h3 {
         width: 90px;
     }
 }
+=======
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    display: flex;
+    height: 100%;
+}
+
+/* ---------------- BARRA LATERAL ---------------- */
+
+.barra-lateral {
+    width: 200px;
+    background: #d8e0ea;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+
+.lista-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.item-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.item-menu img {
+    width: 20px;
+}
+
+.item-menu.activo {
+    background: #bcc9d6;
+}
+
+.item-menu:hover {
+    background: #c8d4e0;
+}
+
+.flecha {
+    margin-left: auto;
+    width: 12px ;
+}
+
+.ajustes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    margin-bottom: 25px;
+}
+
+.ajustes img {
+    width: 18px;
+    
+}
+
+/* ---------------- CONTENIDO PRINCIPAL ---------------- */
+
+.contenido {
+    margin-left: 200px;
+    padding: 20px 40px;
+    width: calc(100% - 200px);
+}
+
+/* ENCABEZADO */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #c2deff
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo img {
+    width: 200px;
+    margin-top: -80px;
+    margin-bottom: -80px;
+}
+
+.perfil img {
+    width: 40px;
+    cursor: pointer;
+}
+
+/* ---------------- TARJETAS DE MATERIAS ---------------- */
+
+.grid-materias {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    gap: 40px;
+}
+
+.tarjeta {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: solid 1px #7a7a7a;
+}
+
+.tarjeta-cabecera {
+    height: 140px;
+    padding: 15px;
+    position: relative;
+}
+
+.img-materia {
+    width: 110px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+h3 {
+    font-size: 25px;
+    margin-top: 8px;
+}
+
+.color-verde { background: #b8f46e; }
+.color-rojo  { background: #e87060; }
+.color-violeta { background: #d3b0ff; }
+.color-azul { background: #7eb8ff; }
+
+.tarjeta-pie {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.tarjeta-pie img {
+    width: 22px;
+    cursor: pointer;
+}
+
+/* ---------------- PAGINACIÓN ---------------- */
+
+.paginacion {
+    margin: 30px auto;
+    display: flex;
+    gap: 8px;
+}
+
+.punto {
+    width: 10px;
+    height: 10px;
+    background: #c8c8c8;
+    border-radius: 50%;
+}
+
+.punto.activo {
+    background: #7a7a7a;
+}
+
+/* BOTÓN SIGUIENTE */
+.boton-siguiente {
+    position: absolute;
+    right: 20px;
+    top: 55%;
+    background: #e3e8ef;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.boton-siguiente img {
+    width: 20px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 1024px) {
+    .grid-materias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .barra-lateral {
+        position: fixed;
+        width: 70px;
+        padding: 15px 5px;
+    }
+
+    .item-menu span,
+    .ajustes span {
+        display: none;
+    }
+
+    .contenido {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+        padding: 20px;
+    }
+
+    .grid-materias {
+        grid-template-columns: 1fr;
+    }
+    .boton-siguiente {
+        display: none;
+    }
+    .flecha {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .encabezado {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tarjeta-cabecera {
+        height: 130px;
+    }
+
+    .img-materia {
+        width: 90px;
+    }
+}
+>>>>>>> eefa230b5ea047fd948735a22e58a4a547468fd0
