@@ -1,6 +1,4 @@
-/* ------------------------------ */
-/* ESTILOS GENERALES */
-/* ------------------------------ */
+
 
 body {
     margin: 0;
@@ -10,9 +8,6 @@ body {
 }
 
 
-/* ------------------------------ */
-/* TOPBAR */
-/* ------------------------------ */
 
 .topbar {
     width: 100%;
@@ -62,10 +57,6 @@ body {
 }
 
 
-/* ------------------------------ */
-/* SIDEBAR */
-/* ------------------------------ */
-
 .sidebar {
     width: 75px;
     background: #273142;
@@ -93,9 +84,6 @@ body {
 }
 
 
-/* ------------------------------ */
-/* CONTENIDO */
-/* ------------------------------ */
 
 .content {
     margin-left: 100px;
@@ -117,9 +105,6 @@ body {
 }
 
 
-/* ------------------------------ */
-/* CALENDARIO */
-/* ------------------------------ */
 
 .calendar {
     background: #181d27;
@@ -166,9 +151,7 @@ body {
 }
 
 
-/* ------------------------------ */
-/* EVENTOS ESTILO TARJETAS */
-/* ------------------------------ */
+
 
 .info {
     margin-top: 8px;
@@ -187,31 +170,22 @@ body {
 }
 
 
-/* ------------------------------ */
-/* COLORES SEGÚN TIPO */
-/* ------------------------------ */
-
-/* Evaluaciones → rojo */
 .evaluacion .info {
     background: #d9534f;
     border-left: 4px solid #ff6f6a;
 }
 
-/* Entregas → azul */
 .entrega .info {
     background: #0275d8;
     border-left: 4px solid #62b3ff;
 }
 
-/* Hover */
 .evaluacion:hover,
 .entrega:hover {
     background-color: #2e3544 !important;
 }
 
-/* ------------------------------ */
-/* ASISTENCIAS (BOLITAS) */
-/* ------------------------------ */
+
 
 .asistencia-dia {
     width: 38px;
@@ -232,26 +206,22 @@ body {
     transform: scale(1.15);
 }
 
-/* Colores */
+
 .presente {
-    background: #4CAF50; /* verde */
+    background: #4CAF50; 
 }
 
 .ausente {
-    background: #d9534f; /* rojo */
+    background: #d9534f; 
 }
 
 .tarde {
-    background: #f0ad4e; /* naranja */
+    background: #f0ad4e; 
 }
 
 .justificada {
-    background: #5bc0de; /* celeste */
+    background: #5bc0de; 
 }
-
-/* ------------------------------ */
-/* LEYENDA DE ASISTENCIAS */
-/* ------------------------------ */
 
 .leyenda-asistencias {
     background: #181d27;
@@ -261,9 +231,8 @@ body {
     width: 200px;
     height: 120px;
     margin-bottom: 50px; 
-      /* queda debajo de la tabla */
-    float: right;           /* la manda a la derecha dentro del calendario */
-    display: none;          /* oculto al inicio */
+    float: right;          
+    display: none;          
 }
 
 .leyenda-asistencias h3 {

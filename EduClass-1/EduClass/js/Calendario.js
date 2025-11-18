@@ -2,9 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const filtro = document.querySelector("#filtroCalendario");
     const dias = document.querySelectorAll(".tabla-calendario td");
-    const leyenda = document.querySelector("#leyendaAsistencias"); // ← AGREGADO
+    const leyenda = document.querySelector("#leyendaAsistencias"); 
 
-    // ---- FECHAS DE EVALUACIÓN ----
     const fechasEvaluaciones = {
         1: { materia: "Geografía", temas: ["Mapas", "Capitales de las provincias Argentinas"] },
         9: { materia: "Matemáticas", temas: ["Ecuaciones", "Inecuaciones", "Problemas"] },
@@ -13,13 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
         14: { materia: "Historia", temas: ["Revolución de Mayo"] }
     };
 
-    // ---- FECHAS DE ENTREGA ----
+    
     const fechasEntrega = {
         4: { materia: "Lengua", temas: ["Entrega de informe escrito"] },
         15: { materia: "Historia", temas: ["TP Segunda Guerra Mundial"] }
     };
 
-    // ---- ASISTENCIAS ----
+
     const asistencias = {
         1: "presente",
         2: "tarde",
@@ -53,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         30: "presente"
     };
 
-    // LIMPIAR TODO
+
     function limpiarDias() {
         dias.forEach(dia => {
             dia.classList.remove("evaluacion", "entrega");
@@ -67,10 +66,9 @@ document.addEventListener("DOMContentLoaded", () => {
             dia.textContent = dia.id.replace("d", "").replace("b", "");
         });
 
-        leyenda.style.display = "none"; // ← AGREGADO
+        leyenda.style.display = "none"; 
     }
 
-    // AGREGAR TARJETAS
     function aplicarEventos(eventos, claseCss) {
         dias.forEach(dia => {
             const numero = parseInt(dia.textContent);
@@ -90,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // AGREGAR ASISTENCIAS
+  
     function aplicarAsistencias() {
         dias.forEach(dia => {
             const numero = parseInt(dia.textContent);
@@ -106,10 +104,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        leyenda.style.display = "block"; // ← AGREGADO
+        leyenda.style.display = "block"; 
     }
 
-    // SELECCIÓN DEL FILTRO
     filtro.addEventListener("change", () => {
         limpiarDias();
 
