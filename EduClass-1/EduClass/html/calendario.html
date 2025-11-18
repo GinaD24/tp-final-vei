@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduClass - Calendario</title>
+    <link rel="icon" href="../educlass.png" type="image/x-icon" />
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/calendario-estilos.css" />
+  </head>
+
+  <body>
+    <!-- ENCABEZADO -->
+    <header class="encabezado"></header>
+    <div class="contenedor">
+      <!-- BARRA LATERAL CARGADA CON JS -->
+      <aside class="barra-lateral" id="sidebar"></aside>
+
+      <!-- CONTENIDO PRINCIPAL -->
+      <main class="contenido">
+        <div class="content">
+          <div class="leyenda-asistencias" id="leyendaAsistencias">
+            <h3>Tipos de asistencia</h3>
+            <div class="leyenda-item">
+              <span class="dot presente"></span> Presente
+            </div>
+            <div class="leyenda-item">
+              <span class="dot ausente"></span> Ausente
+            </div>
+            <div class="leyenda-item">
+              <span class="dot tarde"></span> Llegó tarde
+            </div>
+            <div class="leyenda-item">
+              <span class="dot justificada"></span> Justificada
+            </div>
+          </div>
+        </div>
+        <h2 class="titulo-calendario">CALENDARIO ESCOLAR</h2>
+
+        <select class="filtro" id="filtroCalendario">
+          <option value="">Filtra acá</option>
+          <option value="fechaEntrega">Fecha de entrega</option>
+          <option value="fechaEvaluaciones">Fecha evaluaciones</option>
+          <option value="asistencias">Asistencias</option>
+        </select>
+
+        <!-- 🔹 CONTENEDOR DEL CALENDARIO -->
+        <section class="calendar">
+          <div class="calendar-header">
+            <h2 class="mes">ABRIL</h2>
+          </div>
+
+          <table class="tabla-calendario">
+            <thead>
+              <tr>
+                <th>LUNES</th>
+                <th>MARTES</th>
+                <th>MIÉRCOLES</th>
+                <th>JUEVES</th>
+                <th>VIERNES</th>
+                <th>SÁBADO</th>
+                <th>DOMINGO</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td id="d30">30</td>
+                <td id="d31">31</td>
+                <td id="d1">1</td>
+                <td id="d2">2</td>
+                <td id="d3">3</td>
+                <td id="d4">4</td>
+                <td id="d5">5</td>
+              </tr>
+              <tr>
+                <td id="d6">6</td>
+                <td id="d7">7</td>
+                <td id="d8">8</td>
+                <td id="d9">9</td>
+                <td id="d10">10</td>
+                <td id="d11">11</td>
+                <td id="d12">12</td>
+              </tr>
+              <tr>
+                <td id="d13">13</td>
+                <td id="d14">14</td>
+                <td id="d15">15</td>
+                <td id="d16">16</td>
+                <td id="d17">17</td>
+                <td id="d18">18</td>
+                <td id="d19">19</td>
+              </tr>
+              <tr>
+                <td id="d20">20</td>
+                <td id="d21">21</td>
+                <td id="d22">22</td>
+                <td id="d23">23</td>
+                <td id="d24">24</td>
+                <td id="d25">25</td>
+                <td id="d26">26</td>
+              </tr>
+              <tr>
+                <td id="d27">27</td>
+                <td id="d28">28</td>
+                <td id="d29">29</td>
+                <td id="d30b">30</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+
+      <!-- PIE DE PÁGINA -->
+      <footer class="pie"></footer>
+    </div>
+    <script src="../js/calendario.js"></script>
+    <script src="../js/header-loader.js"></script>
+    <script src="../js/sidebar-loader.js"></script>
+    <script src="../js/footer-loader.js"></script>
+  </body>
+</html>
