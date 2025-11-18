@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduClass - Realizar Tarea</title>
+    <link rel="icon" href="../educlass.png" type="image/x-icon" />
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/materia-realizar-tarea.css" />
+  </head>
+
+  <body>
+    <!-- ENCABEZADO -->
+    <header class="encabezado"></header>
+    <div class="contenedor">
+      <!-- BARRA LATERAL CARGADA CON JS -->
+      <aside class="barra-lateral" id="sidebar"></aside>
+
+      <!-- CONTENIDO PRINCIPAL -->
+      <main class="contenido">
+        <!-- BREADCRUMB -->
+        <nav class="breadcrumb">
+          <a href="#" class="breadcrumb-link">Biología</a>
+          <span class="breadcrumb-separator">></span>
+          <a href="#" class="breadcrumb-link">Actividades</a>
+          <span class="breadcrumb-separator">></span>
+          <span class="breadcrumb-actual"
+            >Actividad n°3 - Unidad 3 - Sistema Nervioso</span
+          >
+        </nav>
+
+        <!-- CABECERA DE LA ACTIVIDAD -->
+        <section class="cabecera-actividad">
+          <div class="titulo-actividad">
+            <img
+              src="../img/icono-actividad.png"
+              alt="Actividad"
+              class="icono-actividad"
+            />
+            <h1>Actividad n°3 - Unidad 3 - Sistema Nervioso</h1>
+          </div>
+          <div class="info-actividad">
+            <p class="fecha-publicacion">Publicado 5/04</p>
+            <div class="puntos-actividad">
+              <img
+                src="../img/estrella.png"
+                alt="Estrella"
+                class="icono-estrella"
+              />
+              <span>Vale 2 puntos</span>
+            </div>
+          </div>
+        </section>
+        <div class="contenedor-flex">
+          <!-- DESCRIPCIÓN DE LA ACTIVIDAD -->
+          <section class="descripcion-actividad">
+            <p>Resolver la siguiente actividad propuesta:</p>
+
+            <div class="archivo-adjunto">
+              <img
+                src="../img/documento.png"
+                alt="Documento"
+                class="icono-documento"
+              />
+              <div class="archivo-info">
+                <p class="archivo-nombre">Actividad n°3</p>
+                <p class="archivo-tipo">Word</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECCIÓN DE ENTREGA -->
+          <section class="seccion-entrega">
+            <div class="encabezado-entrega">
+              <img src="../img/subir.png" alt="Subir" class="icono-subir" />
+              <h2>Subir actividad</h2>
+            </div>
+            <p class="fecha-entrega">Entrega 12/04</p>
+
+            <div class="area-subida">
+              <button class="boton-anadir">
+                <span class="icono-mas">+</span>
+                Añadir archivo
+              </button>
+              <button class="boton-entregar">Entregar</button>
+            </div>
+          </section>
+        </div>
+
+        <!-- SECCIÓN DE COMENTARIOS -->
+        <section class="seccion-comentarios">
+          <h3>Añadir comentario</h3>
+          <div class="area-comentario">
+            <img
+              src="../img/usuario.png"
+              alt="Usuario"
+              class="avatar-usuario"
+            />
+            <input
+              type="text"
+              class="input-comentario"
+              placeholder="Escriba su comentario..."
+            />
+            <button class="boton-enviar">
+              <img src="../img/enviar.png" alt="Enviar" class="icono-enviar" />
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <!-- PIE DE PÁGINA -->
+      <footer class="pie"></footer>
+    </div>
+
+    <!-- SCRIPTS PARA CARGAR BARRA LATERAL -->
+    <script src="../js/sidebar-loader.js"></script>
+    <script src="../js/header-loader.js"></script>
+    <script src="../js/footer-loader.js"></script>
+  </body>
+</html>
