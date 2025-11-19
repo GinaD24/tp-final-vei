@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mensajería</title>
+    <link rel="icon" href="../educlass.png" type="image/x-icon" />
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/materia.css"/>
+    <link rel="stylesheet" href="../css/materia-mensajeria.css" />
+</head>
+
+<body>
+
+        <header class="encabezado"></header>
+        <div class="contenedor">
+
+            <aside class="barra-lateral" id="sidebar"></aside>
+
+            <main class="contenido-materia">
+
+                <section class="header-materia">
+                    <div>
+                        <h1 class="nombre-materia">BIOLOGÍA - Mensajería</h1><br>
+                        <p class="info-materia">Tercer trimestre - 2025</p>
+                    </div>
+                    
+                </section>
+
+
+    <!-- Tabs de navegación -->
+     <nav class="tabs">
+                    <button class="tab active">Recibidos<span class="badge">1</span></button>
+                    <button class="tab">Enviados</button>
+                </nav>
+
+    </nav>
+
+    <!-- Lista de mensajes -->
+    <section class="mensajes-lista">
+
+        <article class="mensaje-card no-leido">
+            <div class="mensaje-info no-leido">
+                <p class="emisor">Prof. Sandra</p>
+                <p class="asunto">AVISO - CLASE 17/11</p>
+            </div>
+            <div class="fecha-e-icono"> 
+                <p class="fecha">13/11/25</p>
+            </div>
+        </article>
+
+        <article class="mensaje-card">
+            <div class="mensaje-info">
+                <p class="emisor">Prof. Sandra</p>
+                <p class="asunto">TEMAS PARA EL EXAMEN DEL 20/11</p>
+            </div>
+              <div class="fecha-e-icono"> 
+                <p class="fecha">11/11/25</p>
+                <img src="../img/icono-responder-mensaje.png" class="icono-responder-mensaje"> 
+            </div>
+        </article>
+
+        <article class="mensaje-card">
+            <div class="mensaje-info">
+                <p class="emisor">Prof. Leila</p>
+                <p class="asunto">DUDAS - TP 3</p>
+            </div>
+             <div class="fecha-e-icono"> 
+                <p class="fecha">07/11/25</p>
+
+                <img src="../img/icono-responder-mensaje.png" class="icono-responder-mensaje"> 
+            </div>
+        </article>
+
+    </section>
+
+
+            </main>
+        </div>
+
+     <footer class="pie"></footer>
+
+     <!-- SCRIPTS PARA CARGAR BARRA LATERAL -->
+    <script src="../js/sidebar-loader.js"></script>
+    <script src="../js/header-loader.js"></script>
+    <script src="../js/footer-loader.js"></script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+/* ------------------------------ */
+/* BREADCRUMB */
+/* ------------------------------ */
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #666;
+}
+
+.breadcrumb-link {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumb-link:hover {
+    color: #2a5bd7;
+}
+
+.breadcrumb-separator {
+    color: #999;
+}
+
+.breadcrumb-actual {
+    color: #333;
+    font-weight: 600;
+}
+
+/* ------------------------------ */
+/* CABECERA DE LA ACTIVIDAD */
+/* ------------------------------ */
+
+.cabecera-actividad {
+    margin-bottom: 30px;
+}
+
+.titulo-actividad {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.icono-actividad {
+    width: 45px;
+    height: 45px;
+    background: #5b8aeb;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.titulo-actividad h1 {
+    font-size: 26px;
+    color: #2a5bd7;
+    margin: 0;
+    font-weight: 600;
+}
+
+.info-actividad {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: 60px;
+}
+.info-actividad .entrega{
+    margin-left: auto;
+}
+
+.fecha-publicacion {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+.puntos-actividad {
+    display: flex;
+    gap: 8px;
+    font-weight: 700;
+    color: #333;
+    margin-left: auto;
+}
+
+.icono-estrella {
+    width: 20px;
+    height: 20px;
+}
+
+/* ------------------------------ */
+/* DESCRIPCIÓN DE LA ACTIVIDAD */
+/* ------------------------------ */
+
+.descripcion-actividad {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 25px;
+}
+
+.descripcion-actividad>p {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.archivo-adjunto {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #d6d6d6;
+    width: 60%;
+}
+
+.icono-documento {
+    width: 35px;
+    height: 35px;
+}
+
+.archivo-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.archivo-nombre {
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    font-size: 14px;
+}
+
+.archivo-tipo {
+    color: #666;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* ------------------------------ */
+/* SECCIÓN DE ENTREGA */
+/* ------------------------------ */
+
+.seccion-entrega {
+    background: #d4e4f7;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #b8d4f1;
+    margin-bottom: 25px;
+}
+
+.encabezado-entrega {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.icono-subir {
+    width: 24px;
+    height: 24px;
+    background: inherit;
+}
+
+.encabezado-entrega h2 {
+    font-size: 18px;
+    color: #2a5bd7;
+    margin: 0;
+    font-weight: 600;
+}
+
+.fecha-entrega {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+
+.area-subida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.boton-anadir {
+    background: white;
+    border: 2px solid #999;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.boton-anadir:hover {
+    background: #f5f5f5;
+    border-color: #666;
+}
+
+.icono-mas {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.boton-entregar {
+    background: #5b8aeb;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.boton-entregar:hover {
+    background: #4a79da;
+}
+
+/* ------------------------------ */
+/* SECCIÓN DE COMENTARIOS */
+/* ------------------------------ */
+
+.seccion-comentarios {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 25px;
+}
+
+.seccion-comentarios h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+}
+
+.area-comentario {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #e0e0e0;
+}
+
+.avatar-usuario {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #c8c8c8;
+}
+
+.input-comentario {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 8px;
+    font-size: 14px;
+    outline: none;
+    color: #333;
+}
+
+.input-comentario::placeholder {
+    color: #999;
+}
+
+.boton-enviar {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.boton-enviar:hover {
+    transform: scale(1.1);
+}
+
+.icono-enviar {
+    width: 24px;
+    height: 24px;
+}
+
+.contenedor-flex {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.contenedor-flex section {
+    flex: 1;
+}
+
+/* ------------------------------ */
+/* RESPONSIVE */
+/* ------------------------------ */
+
+@media (max-width: 768px) {
+    .breadcrumb {
+        flex-wrap: wrap;
+        font-size: 13px;
+    }
+
+    .titulo-actividad {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .titulo-actividad h1 {
+        font-size: 20px;
+    }
+
+    .info-actividad {
+        margin-left: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .descripcion-actividad,
+    .seccion-entrega,
+    .seccion-comentarios {
+        padding: 20px;
+    }
+
+    .archivo-adjunto {
+        width: 100%;
+    }
+    .puntos-actividad {
+        margin-left: 0px;
+    }
+    .info-actividad .entrega{
+        margin-left: 0px;
+}
+
+}
+
+@media (max-width: 480px) {
+    .breadcrumb {
+        font-size: 12px;
+    }
+
+    .titulo-actividad h1 {
+        font-size: 18px;
+    }
+
+    .icono-actividad {
+        width: 35px;
+        height: 35px;
+    }
+
+    .boton-anadir,
+    .boton-entregar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .area-comentario {
+        padding: 8px 12px;
+    }
+
+    .avatar-usuario {
+        width: 30px;
+        height: 30px;
+    }
+}
