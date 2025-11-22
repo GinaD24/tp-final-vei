@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", async function () {
         if (path.includes("materia-mensajeria.html")) {
             SIDEBAR_PATH = "./partials/sidebar-materia-mensajeria.html";
         }
+        if (path.includes("materia-contenidos.html")) {
+            SIDEBAR_PATH = "./partials/sidebar-materia-contenidos.html";
+        }
 
         const res = await fetch(SIDEBAR_PATH);
         const html = await res.text();
