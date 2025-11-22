@@ -16,14 +16,19 @@
 
   <main class="container">
     <section class="info">
-      <h2>Tu escuela,<br>en línea</h2>
-      <p>Plataforma interactiva para<br>
-        aprender, practicar y crecer<br>
-        desde cualquier lugar</p>
+      
+      <h2>Tu escuela,<br>en línea.</h2> 
+      
+      <p>Aprender, practicar y crecer<br>
+        desde cualquier lugar.</p>
+        <div class="ilustracion">
+        <img src="/img/ilustracion-certificacion-linea.png" alt="Imagen">
+      </div>
     </section>
 
     <section class="login-card">
       <h3>Iniciar sesión</h3>
+          <div id="mensaje" class="error"></div>
 
       <label for="usuario">Ingrese su dni:</label>
       <input type="text" id="usuario" placeholder="Escriba aquí..." required autocomplete="off">
@@ -36,6 +41,8 @@
       <button class="login-btn">Iniciar sesión</button>
     </section>
   </main>
+    <script src="/js/inicio.js"></script>
+
 </body>
 
 </html>

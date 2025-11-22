@@ -1,111 +1,130 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduClass</title>
-    <link rel="icon" href="../educlass.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
 
-    <!-- ESTILOS -->
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/home.css" />
-  </head>
+    <!-- BARRA LATERAL -->
+    <aside class="barra-lateral">
+        <div class="item-menu">
+            <img src="/img/menu.png" alt="Menú">
+        </div>
 
-  <body>
-    <!-- ENCABEZADO -->
-    <header class="encabezado"></header>
-    <div class="contenedor">
-      <!-- BARRA LATERAL CARGADA CON JS -->
-      <aside class="barra-lateral" id="sidebar"></aside>
+        <ul class="lista-menu">
+            <li class="item-menu activo">
+                <img src="/img/home.png" alt="Inicio">
+                <span>Inicio</span>
+            </li>
 
-      <!-- CONTENIDO PRINCIPAL -->
-      <main class="contenido">
+            <li class="item-menu">
+                <img src="/img/calendario.png" alt="Calendario">
+                <span>Calendario</span>
+            </li>
+
+            <li class="item-menu">
+                <img src="/img/asignatura.png" alt="Asignaturas">
+                <span>Asignaturas</span>
+                <img class="flecha" src="/img/desplegable.png" alt="">
+            </li>
+
+            <li class="item-menu">
+                <img src="/img/estrella.png" alt="Puntos">
+                <span>Tienda de puntos</span>
+            </li>
+        </ul>
+
+        <div class="ajustes">
+            <img src="/img/ajustes.png" alt="Ajustes">
+            <span>Ajustes</span>
+        </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido">
+
+        <!-- ENCABEZADO -->
+        <header class="encabezado">
+            <div class="logo">
+                <img src="/img/EduClass-logo.png" alt="Logo">
+            </div>
+
+            <div class="perfil">
+                <img src="/img/usuario.png" alt="Perfil">
+            </div>
+        </header>
+
         <!-- GRID DE MATERIAS -->
         <section class="grid-materias">
-          <div class="tarjeta">
-            <div class="tarjeta-cabecera color-verde">
-              <h3>Biología</h3>
-              <p>3ro A - 2025</p>
-              <img
-                class="img-materia"
-                src="../img/biologia.png"
-                alt="Biología"
-              />
-            </div>
-            <div class="tarjeta-pie">
-              <img src="../img/carpeta.png" alt="Carpeta" />
-              <img src="../img/chat.png" alt="Chat" />
-              <img src="../img/sobre.png" alt="Mensaje" />
-            </div>
-          </div>
 
-          <div class="tarjeta">
-            <div class="tarjeta-cabecera color-rojo">
-              <h3>Matemática</h3>
-              <p>3ro A - 2025</p>
-              <img
-                class="img-materia"
-                src="../img/matematica.png"
-                alt="Matemática"
-              />
+            <div class="tarjeta">
+                <div class="tarjeta-cabecera color-verde">
+                    <h3>Biología</h3>
+                    <p>3ro A - 2025</p>
+                    <img class="img-materia" src="/img/biologia.png" alt="Biología">
+                </div>
+                <div class="tarjeta-pie">
+                    <img src="/img/carpeta.png" alt="Carpeta">
+                    <img src="/img/chat.png" alt="Chat">
+                    <img src="/img/sobre.png" alt="Mensaje">
+                </div>
             </div>
-            <div class="tarjeta-pie">
-              <img src="../img/carpeta.png" alt="Carpeta" />
-              <img src="../img/chat.png" alt="Chat" />
-              <img src="../img/sobre.png" alt="Mensaje" />
-            </div>
-          </div>
 
-          <div class="tarjeta">
-            <div class="tarjeta-cabecera color-violeta">
-              <h3>Química</h3>
-              <p>3ro A - 2025</p>
-              <img class="img-materia" src="../img/quimica.png" alt="Química" />
+            <div class="tarjeta">
+                <div class="tarjeta-cabecera color-rojo">
+                    <h3>Matemática</h3>
+                    <p>3ro A - 2025</p>
+                    <img class="img-materia" src="/img/matematica.png" alt="Matemática">
+                </div>
+                <div class="tarjeta-pie">
+                    <img src="/img/carpeta.png" alt="Carpeta">
+                    <img src="/img/chat.png" alt="Chat">
+                    <img src="/img/sobre.png" alt="Mensaje">
+                </div>
             </div>
-            <div class="tarjeta-pie">
-              <img src="../img/carpeta.png" alt="Carpeta" />
-              <img src="../img/chat.png" alt="Chat" />
-              <img src="../img/sobre.png" alt="Mensaje" />
-            </div>
-          </div>
 
-          <div class="tarjeta">
-            <div class="tarjeta-cabecera color-azul">
-              <h3>Geografía</h3>
-              <p>3ro A - 2025</p>
-              <img
-                class="img-materia"
-                src="../img/geografia.png"
-                alt="Geografía"
-              />
+            <div class="tarjeta">
+                <div class="tarjeta-cabecera color-violeta">
+                    <h3>Química</h3>
+                    <p>3ro A - 2025</p>
+                    <img class="img-materia" src="/img/quimica.png" alt="Química">
+                </div>
+                <div class="tarjeta-pie">
+                    <img src="/img/carpeta.png" alt="Carpeta">
+                    <img src="/img/chat.png" alt="Chat">
+                    <img src="/img/sobre.png" alt="Mensaje">
+                </div>
             </div>
-            <div class="tarjeta-pie">
-              <img src="../img/carpeta.png" alt="Carpeta" />
-              <img src="../img/chat.png" alt="Chat" />
-              <img src="../img/sobre.png" alt="Mensaje" />
+
+            <div class="tarjeta">
+                <div class="tarjeta-cabecera color-azul">
+                    <h3>Geografía</h3>
+                    <p>3ro A - 2025</p>
+                    <img class="img-materia" src="/img/geografia.png" alt="Geografía">
+                </div>
+                <div class="tarjeta-pie">
+                    <img src="/img/carpeta.png" alt="Carpeta">
+                    <img src="/img/chat.png" alt="Chat">
+                    <img src="/img/sobre.png" alt="Mensaje">
+                </div>
             </div>
-          </div>
+
         </section>
 
         <div class="paginacion">
-          <span class="punto activo"></span>
-          <span class="punto"></span>
-          <span class="punto"></span>
+            <span class="punto activo"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
         </div>
 
         <button class="boton-siguiente">
-          <img src="../img/flecha.png" alt="Siguiente" />
+            <img src="/img/flecha.png" alt="Siguiente">
         </button>
-      </main>
 
-      <!-- PIE DE PÁGINA -->
-      <footer class="pie"></footer>
-    </div>
+    </main>
 
-    <!--  -->
-    <!-- SCRIPT PARA CARGAR BARRA LATERAL -->
-    <script src="../js/sidebar-loader.js"></script>
-    <script src="../js/header-loader.js"></script>
-    <script src="../js/footer-loader.js"></script>
-  </body>
+</body>
 </html>
