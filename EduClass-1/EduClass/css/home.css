@@ -4,8 +4,14 @@
     margin-top: 40px;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(2, 350px);
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+}
+
+.titulo-bienvenida {
+    font-size: 20px;
+    font-style: oblique;
+    font-weight: bold;
 }
 
 .tarjeta {
@@ -22,15 +28,16 @@
 }
 
 .img-materia {
-    width: 110px;
+    width: 100px;
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 10px;
 }
 
 h3 {
     font-size: 25px;
     margin-top: 8px;
+    cursor: pointer;
 }
 
 .color-verde {
@@ -49,6 +56,14 @@ h3 {
     background: #7eb8ff;
 }
 
+.color-naranja {
+    background: rgb(255, 160, 82);
+}
+
+.color-amarillo {
+    background: rgb(252, 255, 100);
+}
+
 .tarjeta-pie {
     height: 60px;
     display: flex;
@@ -62,47 +77,13 @@ h3 {
     cursor: pointer;
 }
 
-/* ---------------- PAGINACIÓN ---------------- */
-
-.paginacion {
-    margin: 30px auto;
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-}
-
-.punto {
-    width: 10px;
-    height: 10px;
-    background: #c8c8c8;
-    border-radius: 50%;
-}
-
-.punto.activo {
-    background: #7a7a7a;
-}
-
-/* BOTÓN SIGUIENTE */
-.boton-siguiente {
-    position: fixed;
-    right: 20px;
-    top: 55%;
-    background: #e3e8ef;
-    border: none;
-    padding: 12px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.boton-siguiente img {
-    width: 20px;
-}
-
 /* ---------------- RESPONSIVE ---------------- */
+
 
 @media (max-width: 1024px) {
     .grid-materias {
         grid-template-columns: repeat(2, 1fr);
+
     }
 }
 
@@ -112,13 +93,6 @@ h3 {
         grid-template-columns: 1fr;
     }
 
-    .boton-siguiente {
-        display: none;
-    }
-
-    .flecha {
-        display: none;
-    }
 }
 
 @media (max-width: 480px) {
