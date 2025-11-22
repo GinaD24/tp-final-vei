@@ -38,11 +38,17 @@
     margin-bottom: 30px;
 }
 
+.titulo-puntos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
 .titulo-actividad {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 15px;
 }
 
 .icono-actividad {
@@ -60,6 +66,24 @@
     font-weight: 600;
 }
 
+.puntos-actividad {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #d4a000;
+    background: #fff9e6;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid #ffe8a3;
+}
+
+.icono-estrella {
+    width: 26px;
+    height: 26px;
+}
+
 .info-actividad {
     display: flex;
     align-items: center;
@@ -73,17 +97,11 @@
     margin: 0;
 }
 
-.puntos-actividad {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.fecha-entrega-header {
+    color: #2a5bd7;
+    font-size: 14px;
     font-weight: 600;
-    color: #333;
-}
-
-.icono-estrella {
-    width: 20px;
-    height: 20px;
+    margin: 0;
 }
 
 /* ------------------------------ */
@@ -98,45 +116,146 @@
     margin-bottom: 25px;
 }
 
-.descripcion-actividad>p {
-    color: #333;
-    font-size: 15px;
-    margin-bottom: 20px;
+.encabezado-descripcion h3 {
+    font-size: 18px;
+    color: #2a5bd7;
+    margin: 0 0 8px 0;
+    font-weight: 600;
 }
 
-.archivo-adjunto {
+.encabezado-descripcion p {
+    color: #666;
+    font-size: 14px;
+    margin: 0 0 20px 0;
+}
+
+/* Archivo y previsualización integrados */
+.archivo-documento {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.documento-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.documento-icono-info {
     display: flex;
     align-items: center;
     gap: 12px;
-    background: #f9f9f9;
-    padding: 15px 20px;
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
-    width: 50%;
 }
 
 .icono-documento {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
 }
 
-.archivo-info {
+.documento-meta {
     display: flex;
     flex-direction: column;
     gap: 2px;
 }
 
-.archivo-nombre {
+.documento-nombre {
     font-weight: 600;
     color: #333;
     margin: 0;
-    font-size: 14px;
+    font-size: 15px;
 }
 
-.archivo-tipo {
+.documento-tipo {
     color: #666;
     font-size: 13px;
     margin: 0;
+}
+
+.boton-descargar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #2a5bd7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.boton-descargar:hover {
+    background: #1e4bbd;
+}
+
+.icono-descargar {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+}
+
+/* Previsualización del documento */
+.documento-preview {
+    background: #fafbfc;
+}
+
+.preview-header {
+    background: #e8f0fe;
+    padding: 10px 20px;
+    border-bottom: 1px solid #d0e0f5;
+}
+
+.preview-header h4 {
+    font-size: 13px;
+    color: #2a5bd7;
+    margin: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.preview-contenido {
+    padding: 20px;
+    line-height: 1.8;
+}
+
+.preview-instruccion {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 14px;
+}
+
+.preview-instruccion strong {
+    color: #2a5bd7;
+}
+
+.preview-lista {
+    margin: 15px 0;
+    padding-left: 25px;
+    color: #333;
+}
+
+.preview-lista li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.preview-nota {
+    margin: 15px 0 0 0;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+    color: #555;
+    font-size: 13px;
+}
+
+.preview-nota strong {
+    color: #333;
 }
 
 /* ------------------------------ */
@@ -144,10 +263,10 @@
 /* ------------------------------ */
 
 .seccion-entrega {
-    background: #d4e4f7;
+    background: #f0f7ff;
     padding: 25px;
     border-radius: 12px;
-    border: 1px solid #b8d4f1;
+    border: 1px solid #c8dffa;
     margin-bottom: 25px;
 }
 
@@ -155,45 +274,129 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0;
 }
 
 .icono-subir {
-    width: 24px;
-    height: 24px;
-    background: inherit;
+    width: 28px;
+    height: 28px;
 }
 
 .encabezado-entrega h2 {
-    font-size: 18px;
+    font-size: 20px;
     color: #2a5bd7;
     margin: 0;
     font-weight: 600;
 }
 
-.fecha-entrega {
+/* Instrucciones de entrega */
+.instrucciones-entrega {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e8f0;
+}
+
+.instrucciones-entrega h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+}
+
+.lista-instrucciones {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lista-instrucciones li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.numero-paso {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: #2a5bd7;
+    color: white;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.texto-paso {
+    flex: 1;
+}
+
+.texto-paso strong {
+    display: block;
     color: #333;
     font-size: 14px;
-    margin: 0 0 20px 0;
+    margin-bottom: 3px;
+}
+
+.texto-paso p {
+    margin: 0;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Estado de entrega */
+.estado-entrega {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid #ffe8a3;
+    margin-bottom: 20px;
+}
+
+.estado-texto {
+    margin: 0;
+    color: #d4a000;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.fecha-limite {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
 }
 
 .area-subida {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    align-items: stretch;
+    gap: 12px;
 }
 
 .boton-anadir {
     background: white;
-    border: 2px solid #999;
-    padding: 12px 30px;
+    border: 2px dashed #999;
+    padding: 15px 30px;
     border-radius: 8px;
     font-size: 15px;
     color: #333;
     cursor: pointer;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     transition: all 0.2s;
 }
@@ -209,19 +412,19 @@
 }
 
 .boton-entregar {
-    background: #5b8aeb;
+    background: #2a5bd7;
     border: none;
-    padding: 12px 40px;
-    border-radius: 25px;
+    padding: 14px 40px;
+    border-radius: 8px;
     font-size: 15px;
     color: white;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 600;
     transition: background 0.2s;
 }
 
 .boton-entregar:hover {
-    background: #4a79da;
+    background: #1e4bbd;
 }
 
 /* ------------------------------ */
@@ -241,6 +444,54 @@
     color: #333;
     margin: 0 0 15px 0;
     font-weight: 600;
+}
+
+/* Comentario existente */
+.comentario-item {
+    display: flex;
+    gap: 12px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #e9ecef;
+}
+
+.avatar-comentario {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #c8c8c8;
+    flex-shrink: 0;
+}
+
+.comentario-contenido {
+    flex: 1;
+}
+
+.comentario-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.comentario-autor {
+    font-weight: 600;
+    color: #2a5bd7;
+    font-size: 14px;
+}
+
+.comentario-fecha {
+    font-size: 12px;
+    color: #999;
+}
+
+.comentario-texto {
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 .area-comentario {
@@ -314,6 +565,12 @@
         font-size: 13px;
     }
 
+    .titulo-puntos {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
     .titulo-actividad {
         flex-direction: column;
         align-items: flex-start;
@@ -331,14 +588,24 @@
         gap: 10px;
     }
 
+    .contenedor-flex {
+        flex-direction: column;
+    }
+
+    .documento-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+
+    .boton-descargar {
+        justify-content: center;
+    }
+
     .descripcion-actividad,
     .seccion-entrega,
     .seccion-comentarios {
         padding: 20px;
-    }
-
-    .archivo-adjunto {
-        width: 100%;
     }
 }
 

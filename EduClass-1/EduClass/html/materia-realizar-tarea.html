@@ -33,40 +33,74 @@
 
         <!-- CABECERA DE LA ACTIVIDAD -->
         <section class="cabecera-actividad">
-          <div class="titulo-actividad">
-            <img
-              src="../img/icono-actividad.png"
-              alt="Actividad"
-              class="icono-actividad"
-            />
-            <h1>Actividad n°3 - Unidad 3 - Sistema Nervioso</h1>
-          </div>
-          <div class="info-actividad">
-            <p class="fecha-publicacion">Publicado 5/04</p>
+          <div class="titulo-puntos">
+            <div class="titulo-actividad">
+              <img
+                src="../img/icono-actividad.png"
+                alt="Actividad"
+                class="icono-actividad"
+              />
+              <h1>Actividad n°3 - Unidad 3 - Sistema Nervioso</h1>
+            </div>
             <div class="puntos-actividad">
               <img
-                src="../img/estrella.png"
+                src="../img/estrella-costo.png"
                 alt="Estrella"
                 class="icono-estrella"
               />
-              <span>Vale 2 puntos</span>
+              <span>5 puntos</span>
             </div>
+          </div>
+          <div class="info-actividad">
+            <p class="fecha-publicacion">Publicado 5/04</p>
+            <p class="fecha-entrega-header">Entrega 17/11</p>
           </div>
         </section>
         <div class="contenedor-flex">
           <!-- DESCRIPCIÓN DE LA ACTIVIDAD -->
           <section class="descripcion-actividad">
-            <p>Resolver la siguiente actividad propuesta:</p>
+            <div class="encabezado-descripcion">
+              <h3>Consigna</h3>
+              <p>Resolver la siguiente actividad propuesta</p>
+            </div>
 
-            <div class="archivo-adjunto">
-              <img
-                src="../img/documento.png"
-                alt="Documento"
-                class="icono-documento"
-              />
-              <div class="archivo-info">
-                <p class="archivo-nombre">Actividad n°3</p>
-                <p class="archivo-tipo">Word</p>
+            <div class="archivo-documento">
+              <div class="documento-header">
+                <div class="documento-icono-info">
+                  <img
+                    src="../img/documento.png"
+                    alt="Documento"
+                    class="icono-documento"
+                  />
+                  <div class="documento-meta">
+                    <p class="documento-nombre">Actividad n°3 - Sistema Nervioso</p>
+                    <p class="documento-tipo">Documento Word • 2 páginas</p>
+                  </div>
+                </div>
+                <button class="boton-descargar">
+                  <img src="../img/download.svg" alt="Descargar" class="icono-descargar" />
+                  Descargar
+                </button>
+              </div>
+
+              <div class="documento-preview">
+                <div class="preview-header">
+                  <h4>Vista previa del documento</h4>
+                </div>
+                <div class="preview-contenido">
+                  <p class="preview-instruccion">
+                    <strong>Instrucciones:</strong> Responda las siguientes preguntas sobre el sistema nervioso:
+                  </p>
+                  <ol class="preview-lista">
+                    <li>Explique la diferencia entre el sistema nervioso central y el periférico.</li>
+                    <li>Describa el proceso de transmisión sináptica entre neuronas.</li>
+                    <li>¿Qué función cumplen los neurotransmisores en el sistema nervioso?</li>
+                    <li>Mencione tres tipos de neuronas y sus características principales.</li>
+                  </ol>
+                  <p class="preview-nota">
+                    <strong>Formato de entrega:</strong> Documento Word o PDF con desarrollo completo de cada punto.
+                  </p>
+                </div>
               </div>
             </div>
           </section>
@@ -75,23 +109,74 @@
           <section class="seccion-entrega">
             <div class="encabezado-entrega">
               <img src="../img/subir.png" alt="Subir" class="icono-subir" />
-              <h2>Subir actividad</h2>
+              <h2>Tu entrega</h2>
             </div>
-            <p class="fecha-entrega">Entrega 12/04</p>
+
+            <div class="instrucciones-entrega">
+              <h3>Cómo entregar la actividad</h3>
+              <ol class="lista-instrucciones">
+                <li>
+                  <span class="numero-paso">1</span>
+                  <div class="texto-paso">
+                    <strong>Descarga el archivo</strong>
+                    <p>Haz clic en el botón "Descargar" del documento de la actividad</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="numero-paso">2</span>
+                  <div class="texto-paso">
+                    <strong>Completa la actividad</strong>
+                    <p>Responde todas las preguntas en el documento descargado</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="numero-paso">3</span>
+                  <div class="texto-paso">
+                    <strong>Sube tu archivo</strong>
+                    <p>Haz clic en "Añadir archivo" y selecciona tu documento completo</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <div class="estado-entrega">
+              <p class="estado-texto">Sin entregar</p>
+              <p class="fecha-limite">Fecha límite: 17/11</p>
+            </div>
 
             <div class="area-subida">
               <button class="boton-anadir">
                 <span class="icono-mas">+</span>
                 Añadir archivo
               </button>
-              <button class="boton-entregar">Entregar</button>
+              <button class="boton-entregar">Entregar actividad</button>
             </div>
           </section>
         </div>
 
         <!-- SECCIÓN DE COMENTARIOS -->
         <section class="seccion-comentarios">
-          <h3>Añadir comentario</h3>
+          <h3>Comentarios de la actividad</h3>
+          
+          <!-- Comentario existente -->
+          <div class="comentario-item">
+            <img
+              src="../img/usuario.png"
+              alt="Usuario"
+              class="avatar-comentario"
+            />
+            <div class="comentario-contenido">
+              <div class="comentario-header">
+                <span class="comentario-autor">Martín González</span>
+                <span class="comentario-fecha">Hace 2 días</span>
+              </div>
+              <p class="comentario-texto">
+                Profe, ¿el documento incluye también diagramas o solo texto? Gracias!
+              </p>
+            </div>
+          </div>
+
+          <h3 style="margin-top: 25px;">Añadir comentario</h3>
           <div class="area-comentario">
             <img
               src="../img/usuario.png"

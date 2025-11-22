@@ -7,15 +7,11 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         let SIDEBAR_PATH = "./partials/sidebar.html"; // default
 
-        if (path.includes("materia.html")) {
+        if (path.includes("materia.html") || path.includes("materia-realizar-tarea.html")) {
             SIDEBAR_PATH = "./partials/sidebar-materia.html";
         }
 
-                if (path.includes("actividad.html")) {
-            SIDEBAR_PATH = "./partials/sidebar-materia.html";
-        }
-
-          if (path.includes("materia-mensajeria.html")) {
+        if (path.includes("materia-mensajeria.html")) {
             SIDEBAR_PATH = "./partials/sidebar-materia-mensajeria.html";
         }
 
@@ -25,13 +21,13 @@ document.addEventListener("DOMContentLoaded", async function () {
         sidebar.appendChild(template.content);
 
         activarSideBar();
-        
+
     } catch (error) {
         console.error("Error cargando sidebar:", error);
     }
 });
 
-function activarSideBar(){
+function activarSideBar() {
     const tienda = document.getElementById("tienda");
     const home = document.getElementById("home");
     const calendario = document.getElementById("calendario");
@@ -42,15 +38,15 @@ function activarSideBar(){
     calendario.classList.remove("activo");
     asignatura.classList.remove("activo");
 
-        if (window.location.pathname.includes("tienda")) {
-            tienda.classList.add("activo");
-        }
-        else if (window.location.pathname.includes("calendario")){
-            calendario.classList.add("activo");
-        }
-        else if(window.location.pathname.includes("asignatura")){
-            asignatura.classList.add("activo");
-        } else{
-            home.classList.add("activo");
-        }
+    if (window.location.pathname.includes("tienda")) {
+        tienda.classList.add("activo");
+    }
+    else if (window.location.pathname.includes("calendario")) {
+        calendario.classList.add("activo");
+    }
+    else if (window.location.pathname.includes("asignatura")) {
+        asignatura.classList.add("activo");
+    } else {
+        home.classList.add("activo");
+    }
 }
