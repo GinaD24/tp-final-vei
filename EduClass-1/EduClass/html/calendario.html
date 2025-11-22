@@ -20,23 +20,6 @@
 
       <!-- CONTENIDO PRINCIPAL -->
       <main class="contenido">
-        <div class="content">
-          <div class="leyenda-asistencias" id="leyendaAsistencias">
-            <h3>Tipos de asistencia</h3>
-            <div class="leyenda-item">
-              <span class="dot presente"></span> Presente
-            </div>
-            <div class="leyenda-item">
-              <span class="dot ausente"></span> Ausente
-            </div>
-            <div class="leyenda-item">
-              <span class="dot tarde"></span> Llegó tarde
-            </div>
-            <div class="leyenda-item">
-              <span class="dot justificada"></span> Justificada
-            </div>
-          </div>
-        </div>
         <h2 class="titulo-calendario">CALENDARIO ESCOLAR</h2>
 
         <select class="filtro" id="filtroCalendario">
@@ -49,7 +32,13 @@
         <!-- 🔹 CONTENEDOR DEL CALENDARIO -->
         <section class="calendar">
           <div class="calendar-header">
+            <button class="nav-mes" id="mesAnterior">
+              <img src="../img/flecha.svg" alt="Mes anterior" class="flecha-nav" style="transform: rotate(180deg);">
+            </button>
             <h2 class="mes">ABRIL</h2>
+            <button class="nav-mes" id="mesSiguiente">
+              <img src="../img/flecha.svg" alt="Mes siguiente" class="flecha-nav">
+            </button>
           </div>
 
           <table class="tabla-calendario">
@@ -114,6 +103,69 @@
             </tbody>
           </table>
         </section>
+
+        <!-- LEYENDA Y CONTADOR DEBAJO DEL CALENDARIO -->
+        <div class="leyenda-asistencias" id="leyendaAsistencias">
+          <div class="leyenda-seccion">
+            <h3>Tipos de asistencia</h3>
+            <div class="leyenda-items-horizontal">
+              <div class="leyenda-item">
+                <span class="dot presente"></span> Presente
+              </div>
+              <div class="leyenda-item">
+                <span class="dot ausente"></span> Ausente
+              </div>
+              <div class="leyenda-item">
+                <span class="dot tarde"></span> Llegó tarde
+              </div>
+              <div class="leyenda-item">
+                <span class="dot justificada"></span> Justificada
+              </div>
+            </div>
+          </div>
+
+          <div class="leyenda-seccion">
+            <h3>Contador de asistencias</h3>
+            <div class="contador-grid">
+              <div class="contador-item">
+                <span class="contador-numero presente-count">18</span>
+                <span class="contador-label">Presente</span>
+              </div>
+              <div class="contador-item">
+                <span class="contador-numero ausente-count">2</span>
+                <span class="contador-label">Ausente</span>
+              </div>
+              <div class="contador-item">
+                <span class="contador-numero tarde-count">4</span>
+                <span class="contador-label">Llegó tarde</span>
+              </div>
+              <div class="contador-item">
+                <span class="contador-numero justificada-count">1</span>
+                <span class="contador-label">Justificada</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="leyenda-seccion">
+            <h3>Faltas totales</h3>
+            <div class="faltas-totales">
+              <span class="faltas-numero">5</span>
+              <span class="faltas-label">Faltas totales</span>
+            </div>
+          </div>
+
+          <div class="leyenda-seccion">
+            <h3>Cómo se calculan</h3>
+            <div class="aclaracion-calculo">
+              <ul class="aclaracion-lista">
+                <li><strong>Ausente:</strong> 1 falta</li>
+                <li><strong>Justificada:</strong> 1 falta</li>
+                <li><strong>Llegó tarde:</strong> 0.5 falta</li>
+                <li><strong>Presente:</strong> No cuenta</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </main>
 
       <!-- PIE DE PÁGINA -->

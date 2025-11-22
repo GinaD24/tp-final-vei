@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
             dia.textContent = dia.id.replace("d", "").replace("b", "");
         });
 
-        leyenda.style.display = "none"; // ← AGREGADO
+        leyenda.classList.remove("visible");
     }
 
     // AGREGAR TARJETAS
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        leyenda.style.display = "block"; // ← AGREGADO
+        leyenda.classList.add("visible");
     }
 
     // SELECCIÓN DEL FILTRO
