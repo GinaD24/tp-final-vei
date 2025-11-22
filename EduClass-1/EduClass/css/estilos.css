@@ -28,7 +28,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 80px 40px;
+  padding: 30px;
 }
 
 .info {
@@ -51,7 +51,7 @@ body {
   border-radius: 10px;
   padding: 30px 40px;
   width: 400px;
-  height: 350px;
+  height: 370px;
   box-shadow: 0 0 4px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
@@ -59,7 +59,7 @@ body {
 
 .login-card h3 {
   text-align: center;
-  color: #5578ac;
+  color: #65bbec;
   margin-bottom: 20px;
   font-size: 25px;
 }
@@ -89,10 +89,12 @@ body {
 }
 
 .login-btn {
+  width: 70%;
+  align-self: center;
   margin-top: 30px;
-  background-color: #6f92c5;
+  background-color: #65bbec;
   color: white;
-  border: 2px solid #5578ac;
+  border: 2px solid #71a0e7;
   border-radius: 20px;
   padding: 8px 0;
   cursor: pointer;
@@ -100,8 +102,22 @@ body {
 }
 
 .login-btn:hover {
-  background-color: #5f81b3;
+  background-color: #71a0e7;
 }
+
+
+.error{
+    color: crimson;
+    font-size: 12px;
+}
+.ilustracion img {
+  width: 250px;
+  margin: -20px 0 0 0;
+}
+.login-container{
+    min-height: 80svh;
+}
+
 
 @media (max-width: 700px) {
   .container {
