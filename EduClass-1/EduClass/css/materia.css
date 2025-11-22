@@ -110,16 +110,43 @@
     transform: scale(1.03);
 }
 
+/* Estados de actividades */
 .estado-actividad {
-    font-weight: bold;
-    color: #1e8e3e;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
     display: flex;
     align-items: center;
-    gap: 0.5rem; /* 8px */
+    gap: 0.5rem;
 }
 
-.estado-actividad.tarde {
-    color: #0057c1;
+.estado-actividad.entregada {
+    color: #1e8e3e;
+    background: #e8f5e9;
+    border: 1px solid #a5d6a7;
+}
+
+.estado-actividad.entregada-tarde {
+    color: #f57c00;
+    background: #fff3e0;
+    border: 1px solid #ffcc80;
+}
+
+.estado-actividad.en-revision {
+    color: #1976d2;
+    background: #e3f2fd;
+    border: 1px solid #90caf9;
+}
+
+.estado-actividad.sin-entregar {
+    color: #d32f2f;
+    background: #ffebee;
+    border: 1px solid #ef9a9a;
+}
+
+.btn-realizar.estado-pendiente {
+    /* mantiene los estilos del btn-realizar */
 }
 
 @media (max-width: 992px) {
@@ -145,6 +172,208 @@
 
     .estado-actividad{
         align-self: flex-end;
+    }
+}
+
+/* ------------------------------ */
+/* CUADRO DESCRIPTIVO Y CONTADOR */
+/* ------------------------------ */
+
+.info-actividades {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #c2deff;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.info-seccion h3 {
+    font-size: 14px;
+    color: #2a5bd7;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Estados lista */
+.estados-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.estado-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.estado-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.estado-dot.pendiente {
+    background: #5b6ad0;
+}
+
+.estado-dot.en-revision {
+    background: #1976d2;
+}
+
+.estado-dot.entregada {
+    background: #1e8e3e;
+}
+
+.estado-dot.entregada-tarde {
+    background: #f57c00;
+}
+
+.estado-dot.sin-entregar {
+    background: #d32f2f;
+}
+
+/* Contador de actividades */
+.contador-actividades {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.contador-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.contador-num {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.contador-num.pendiente-count {
+    color: #5b6ad0;
+}
+
+.contador-num.revision-count {
+    color: #1976d2;
+}
+
+.contador-num.entregada-count {
+    color: #1e8e3e;
+}
+
+.contador-num.tarde-count {
+    color: #f57c00;
+}
+
+.contador-num.sin-entregar-count {
+    color: #d32f2f;
+}
+
+.contador-txt {
+    font-size: 11px;
+    color: #666;
+    text-align: center;
+}
+
+/* Total actividades */
+.total-actividades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #e3f2fd;
+    border-radius: 8px;
+    border: 2px solid #90caf9;
+}
+
+.total-numero {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1976d2;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.total-label {
+    font-size: 13px;
+    color: #0d47a1;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Info texto */
+.info-texto {
+    background: #f0f7ff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #c8dffa;
+}
+
+.info-texto ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-texto li {
+    font-size: 11px;
+    color: #555;
+    margin-bottom: 6px;
+    padding-left: 8px;
+}
+
+.info-texto li strong {
+    color: #2a5bd7;
+    font-weight: 600;
+}
+
+/* ------------------------------ */
+/* RESPONSIVE */
+/* ------------------------------ */
+
+@media (max-width: 992px) {
+
+    .contenido-materia {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .nombre-materia {
+        font-size: 2.2rem;
+    }
+
+    .actividad-card {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .btn-realizar {
+        align-self: flex-end;
+    }
+
+    .estado-actividad{
+        align-self: flex-end;
+    }
+
+    .info-actividades {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 }
 
@@ -174,5 +403,15 @@
 
     .estado-actividad{
         align-self: center;
+    }
+
+    .info-actividades {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .contador-actividades {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

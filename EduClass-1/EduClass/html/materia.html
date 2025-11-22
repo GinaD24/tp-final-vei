@@ -42,9 +42,33 @@
                     <article class="actividad-card">
                         <div class="actividad-info">
                             <img src="../img/icono-actividad.png"class="icono-actividad">
+                            <span>Actividad n°6 - Unidad 4 - Sistema Inmunológico</span>
+                        </div>
+                        <a href="materia-realizar-tarea.html"class="btn-realizar estado-pendiente">Realizar tarea</a>
+                    </article>
+
+                    <article class="actividad-card">
+                        <div class="actividad-info">
+                            <img src="../img/icono-actividad.png"class="icono-actividad">
+                            <span>Actividad n°5 - Unidad 3 - Genética y Herencia</span>
+                        </div>
+                        <span class="estado-actividad sin-entregar">Sin entregar</span>
+                    </article>
+
+                    <article class="actividad-card">
+                        <div class="actividad-info">
+                            <img src="../img/icono-actividad.png"class="icono-actividad">
+                            <span>Actividad n°4 - Unidad 3 - ADN y ARN</span>
+                        </div>
+                        <span class="estado-actividad en-revision">En revisión</span>
+                    </article>
+
+                    <article class="actividad-card">
+                        <div class="actividad-info">
+                            <img src="../img/icono-actividad.png"class="icono-actividad">
                             <span>Actividad n°3 - Unidad 3 - Sistema Nervioso</span>
                         </div>
-                        <a href="materia-realizar-tarea.html"class="btn-realizar">Realizar tarea</a>
+                        <span class="estado-actividad entregada">Entregada</span>
                     </article>
 
                     <article class="actividad-card">
@@ -52,7 +76,7 @@
                             <img src="../img/icono-actividad.png"class="icono-actividad">
                             <span>Actividad n°2 - Unidad 2 - Sistema Digestivo</span>
                         </div>
-                        <span class="estado-actividad">Entregada ✔</span>
+                        <span class="estado-actividad entregada">Entregada</span>
                     </article>
 
                     <article class="actividad-card">
@@ -60,10 +84,86 @@
                             <img src="../img/icono-actividad.png"class="icono-actividad">
                             <span>Actividad n°1 - Unidad 1 - Sistema Circulatorio</span>
                         </div>
-                        <span class="estado-actividad tarde">Entregada con retraso</span>
+                        <span class="estado-actividad entregada-tarde">Entregada con retraso</span>
                     </article>
 
                 </section>
+
+                <!-- CUADRO DESCRIPTIVO Y CONTADOR -->
+                <div class="info-actividades">
+                    <div class="info-seccion">
+                        <h3>Estados de actividades</h3>
+                        <div class="estados-lista">
+                            <div class="estado-item">
+                                <span class="estado-dot pendiente"></span>
+                                <span>Pendiente (sin comenzar)</span>
+                            </div>
+                            <div class="estado-item">
+                                <span class="estado-dot en-revision"></span>
+                                <span>En revisión</span>
+                            </div>
+                            <div class="estado-item">
+                                <span class="estado-dot entregada"></span>
+                                <span>Entregada a tiempo</span>
+                            </div>
+                            <div class="estado-item">
+                                <span class="estado-dot entregada-tarde"></span>
+                                <span>Entregada con retraso</span>
+                            </div>
+                            <div class="estado-item">
+                                <span class="estado-dot sin-entregar"></span>
+                                <span>Sin entregar (vencida)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-seccion">
+                        <h3>Resumen de actividades</h3>
+                        <div class="contador-actividades">
+                            <div class="contador-item">
+                                <span class="contador-num pendiente-count">1</span>
+                                <span class="contador-txt">Pendiente</span>
+                            </div>
+                            <div class="contador-item">
+                                <span class="contador-num revision-count">1</span>
+                                <span class="contador-txt">En revisión</span>
+                            </div>
+                            <div class="contador-item">
+                                <span class="contador-num entregada-count">2</span>
+                                <span class="contador-txt">Entregadas</span>
+                            </div>
+                            <div class="contador-item">
+                                <span class="contador-num tarde-count">1</span>
+                                <span class="contador-txt">Con retraso</span>
+                            </div>
+                            <div class="contador-item">
+                                <span class="contador-num sin-entregar-count">1</span>
+                                <span class="contador-txt">Sin entregar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-seccion">
+                        <h3>Total de actividades</h3>
+                        <div class="total-actividades">
+                            <span class="total-numero">6</span>
+                            <span class="total-label">Actividades asignadas</span>
+                        </div>
+                    </div>
+
+                    <div class="info-seccion">
+                        <h3>ℹ️ Información</h3>
+                        <div class="info-texto">
+                            <ul>
+                                <li><strong>Pendiente:</strong> Aún no comenzada</li>
+                                <li><strong>En revisión:</strong> Enviada, esperando corrección</li>
+                                <li><strong>Entregada:</strong> Completada y aprobada</li>
+                                <li><strong>Con retraso:</strong> Enviada fuera de plazo</li>
+                                <li><strong>Sin entregar:</strong> Fecha límite vencida</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
             </main>
         </div>
