@@ -1,0 +1,227 @@
+/* ===== LISTA DE CONTENIDOS ===== */
+.contenidos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem; /* 20px */
+    margin-top: 1.25rem;
+}
+
+/* Tarjeta de contenido */
+.contenido-card {
+    background: #f9f9f9;
+    border: 1px solid #dedede;
+    border-radius: 0.75rem; /* 12px */
+    padding: 1.25rem; /* 20px */
+    transition: all 0.3s ease;
+}
+
+.contenido-card:hover {
+    background: #f1f1f1;
+    border-color: #cacaca;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header del contenido */
+.contenido-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.contenido-unidad {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Badges de unidad */
+.unidad-badge {
+    font-size: 0.75rem; /* 12px */
+    font-weight: 600;
+    padding: 0.25rem 0.75rem; /* 4px 12px */
+    border-radius: 1rem;
+    color: white;
+    white-space: nowrap;
+}
+
+.unidad-1 {
+    background: #4a9cdc;
+}
+
+.unidad-2 {
+    background: #88cf5c;
+}
+
+.unidad-3 {
+    background: #dc86dc;
+}
+
+.unidad-4 {
+    background: #fa654b;
+}
+
+/* Título del contenido */
+.contenido-titulo {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 700;
+    color: #2a5bd7;
+    margin: 0;
+}
+
+/* Fecha */
+.contenido-fecha {
+    font-size: 0.875rem; /* 14px */
+    color: #666;
+    white-space: nowrap;
+}
+
+/* Descripción */
+.contenido-descripcion {
+    font-size: 0.9375rem; /* 15px */
+    color: #555;
+    line-height: 1.5;
+    margin: 0.75rem 0;
+}
+
+/* Recursos */
+.contenido-recursos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.recurso-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: white;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.recurso-item:hover {
+    background: #f0f7ff;
+    border-color: #4a9cdc;
+    transform: translateY(-2px);
+}
+
+.recurso-item span {
+    font-size: 0.875rem;
+    color: #333;
+}
+
+.icono-recurso {
+    width: 1.25rem; /* 20px */
+    height: 1.25rem;
+    color: #2a5bd7;
+}
+
+/* Información adicional */
+.info-contenidos {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    background: #f0f4f8;
+    border-radius: 0.75rem;
+}
+
+.info-seccion-contenido {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid #4a9cdc;
+}
+
+.info-seccion-contenido h3 {
+    margin-top: 0;
+    color: #2a5bd7;
+    font-size: 1.125rem;
+}
+
+.info-seccion-contenido p {
+    font-size: 0.9375rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+}
+
+.info-seccion-contenido ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.info-seccion-contenido li {
+    font-size: 0.9375rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Lista de recursos en info */
+.lista-recursos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 0;
+    list-style: none;
+}
+
+.lista-recursos .recurso-item {
+    margin: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .contenido-card {
+        padding: 1rem;
+    }
+
+    .contenido-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .contenido-unidad {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .contenido-titulo {
+        font-size: 1.125rem; /* 18px */
+    }
+
+    .contenido-fecha {
+        font-size: 0.8125rem; /* 13px */
+    }
+
+    .contenido-descripcion {
+        font-size: 0.875rem; /* 14px */
+    }
+
+    .contenido-recursos {
+        flex-direction: column;
+    }
+
+    .recurso-item {
+        width: 100%;
+    }
+
+    .info-contenidos {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .info-seccion-contenido {
+        padding: 1rem;
+    }
+}
