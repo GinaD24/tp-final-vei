@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f4f7fb;
+    display: flex;
+}
+
+
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background: #eaf1ff;
+    border-right: 1px solid #d5e2ff;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+
+.sidebar .logo img {
+    width: 140px;   
+    height: auto;
+}
+
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 12px 10px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    color: #333;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.menu li img {
+    width: 24px;
+}
+
+
+
+.ajustes {
+    margin-top: auto;
+    padding: 12px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: #333;
+}
+
+.ajustes img {
+    width: 20px;    
+    opacity: 0.8;
+}
+
+
+.topbar {
+    height: 65px;
+    background: white;
+    border-bottom: 1px solid #dedede;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.topbar .perfil img {
+    width: 45px;
+    border-radius: 50%;
+}
+
+
+.contenido {
+    flex: 1;
+    padding: 30px 50px;
+}
+
+.seccion-titulo {
+    margin-bottom: 25px;
+    color: #2563eb;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+.foro {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    gap: 18px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    border-left: 5px solid #60a5fa;
+}
+
+.foro .icono img {
+    width: 45px;   
+}
+
+.foro .info h3 {
+    margin: 0 0 6px;
+    font-size: 19px;
+}
+
+.foro .info p {
+    margin: 0;
+    color: #555;
+}
+
+
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        display: none; 
+    }
+
+    .topbar {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    .contenido {
+        padding: 20px;
+    }
+
+    .seccion-titulo {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .foro {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .foro .icono img {
+        width: 40px;
+        margin: auto;
+    }
+
+    .foro .info h3 {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .foro .info p {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .fecha {
+        display: block;
+        text-align: center;
+        margin-top: 5px;
+    }
+}
