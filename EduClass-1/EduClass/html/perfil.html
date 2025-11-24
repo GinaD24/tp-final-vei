@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduClass - Datos personales</title>
+    <link rel="icon" href="../educlass.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/perfil-estilos.css" />
+  </head>
+  <body>
+    <header class="encabezado"></header>
+
+    <div class="contenedor">
+      <!-- BARRA LATERAL CARGADA CON JS -->
+      <aside class="barra-lateral" id="sidebar"></aside>
+
+      <main class="contenido">
+        <div class="sidebar">
+          <div class="image-container">
+            <div class="circle">
+              <img src="../img/add.png" alt="Agregar foto" />
+            </div>
+            <img src="../img/usuario.png" alt="Perfil" />
+          </div>
+
+          <h2>Leandro Paniagua</h2>
+        </div>
+
+        <div class="formulario">
+          <h1>Datos personales</h1>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Año en curso:</label>
+              <input type="text" value="3ro A" />
+            </div>
+
+            <div class="form-group">
+              <label>Email institucional:</label>
+              <input type="text" value="alumno@educlass.com" />
+            </div>
+
+            <div class="form-group">
+              <label>DNI:</label>
+              <input type="text" value="12345678" />
+            </div>
+
+            <div class="form-group">
+              <label>Email personal:</label>
+              <input type="text" value="alumno@gmail.com" />
+            </div>
+
+            <div class="form-group">
+              <label>Género:</label>
+              <input type="text" value="Femenino" />
+            </div>
+
+            <div class="form-group">
+              <label>Teléfono:</label>
+              <input type="text" value="15-2024-4897" />
+            </div>
+
+            <div class="form-group">
+              <label>Fecha de nacimiento:</label>
+              <input type="text" value="27/03/2008" />
+            </div>
+
+            <div class="form-group">
+              <label>Dirección:</label>
+              <input type="text" value="coronel isleños..." />
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button class="btn">Guardar cambios</button>
+          </div>
+        </div>
+      </main>
+
+      <footer class="pie"></footer>
+    </div>
+
+    <!-- SCRIPT PARA CARGAR BARRA LATERAL -->
+    <script src="../js/sidebar-loader.js"></script>
+    <script src="../js/header-loader.js"></script>
+    <script src="../js/footer-loader.js"></script>
+  </body>
+</html>

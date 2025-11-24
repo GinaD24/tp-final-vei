@@ -1,0 +1,374 @@
+
+/* ===== VARIABLES ===== */
+:root {
+    --color-principal-azul: #3171c5; 
+    --color-gris-texto: #6c757d; 
+    --color-verde-canjear: #28a745; 
+    --color-estrella: #ca9b11ef;
+    
+    --width-botonMateria: 120px;
+    --color-materia-lengua: #4a9cdc;
+    --color-materia-biologia: #88cf5c;
+    --color-materia-fisica: #7f9cc4;
+    --color-materia-quimica: #dc86dc;
+    --color-materia-ingles: #dd77a3;
+    --color-materia-matematica: #fa654b;
+    --color-materia-musica: #ffb649;
+}
+
+/* ===== HEADER Y TÍTULO ===== */
+.header-canjes {
+    padding: 0 20px;
+}
+
+.tienda-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.tienda-titulo {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.puntos-actuales {
+    margin-top: 10px;
+    text-align: right;
+
+}
+
+.puntos-texto {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--color-gris-texto);
+    margin-bottom: 5px;
+}
+
+.puntos-valor {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: var(--color-principal-azul);
+}
+
+.estrella-icon {
+    width: 20px;
+    margin-right: 5px;
+}
+
+/* ===== NAVEGACIÓN DE MATERIAS ===== */
+.materias-wrapper {
+    position: relative; 
+}
+
+.materia-seleccionada-wrapper {
+    margin-top: 50px;
+    position: relative;
+    margin-left: -50px; 
+    display: flex; 
+}
+
+
+.materias-nav {
+    display: flex;
+    gap: 50px;
+    padding-left: 55px; 
+    z-index: 5;
+}
+
+.materia-btn {
+    width: var(--width-botonMateria); 
+    padding: 8px 15px;
+    border-radius: 5px 5px 0 0; 
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white; 
+    transition: transform 0.1s, box-shadow 0.1s;
+    text-align: center;
+   
+}
+
+
+.materias-nav a:nth-child(1) { background-color: var(--color-materia-lengua); } 
+.materias-nav a:nth-child(2) { background-color: var(--color-materia-biologia); } 
+.materias-nav a:nth-child(3) { background-color: var(--color-materia-fisica); } 
+.materias-nav a:nth-child(4) { background-color: var(--color-materia-quimica); } 
+.materias-nav a:nth-child(5) { background-color: var(--color-materia-ingles); } 
+.materias-nav a:nth-child(6) { background-color: var(--color-materia-matematica); } 
+.materias-nav a:nth-child(7) { background-color: var(--color-materia-musica); }
+
+.etiqueta-bandera {
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: var(--width-botonMateria); 
+    height: 180%; 
+    background-color: #4a9cdc; 
+    z-index: 1; 
+    box-shadow: 2px 10px 5px rgba(1, 1, 1, 0.1); 
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 40%, 0 80%); 
+}
+
+
+.materia-btn.selected-tab {
+    background-color: var(--color-principal-azul);
+    padding: 10px 18px; 
+    margin-left: -5px; 
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.contenido-tienda {
+    width: 100%;
+    min-height: 80%;
+    margin-top: var(--header-height);
+}
+
+.canjes-disponibles {
+    background-color: #d8e0ea;
+    width: 100%;
+    padding: 20px;
+    min-height: 80svh;
+}
+
+/* ===== SECCIÓN DE CANJES ===== */
+.canjes-titulo {
+    margin-top: 70px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-principal-azul); 
+    margin-bottom: 15px;
+}
+
+.lista-canjes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Items de canje */
+.canje-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #e6f0ff; 
+    border-radius: 8px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.canje-item:hover {
+    background-color: #d4e1f2; 
+    transform: scale(1.009);
+}
+
+/* Fecha (visible siempre) y puntos mobile (solo mobile) */
+.canje-fecha-costo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.canje-fecha {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #666;
+    min-width: 60px;
+    text-align: center;
+}
+
+.canje-costo-mobile {
+    display: none; /* Oculto en desktop, visible en mobile */
+}
+
+/* Detalles del canje */
+.canje-detalle {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.canje-nombre {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-principal-azul);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.canje-descripcion {
+    font-size: 0.95rem;
+    color: var(--color-gris-texto);
+    line-height: 1.4;
+    flex: 1;
+    padding-left: 15px;
+    border-left: 2px solid #d0d0d0;
+}
+
+/* Puntos (desktop - al lado del botón) */
+.canje-costo-desktop {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--color-estrella);
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Botón canjear */
+.canje-btn {
+    background-color: var(--color-verde-canjear);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.0rem;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    min-width: 100px;
+    border: 3px solid var(--color-verde-canjear);
+}
+
+.canje-btn:hover {
+    background-color: #65d47d6a;
+    color: var(--color-verde-canjear);
+}
+
+/* Aviso informativo */
+.aviso {
+    font-size: 1rem;
+    color: #555;
+    background: #fff9e6;
+    border-left: 3px solid #ffc107;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Footer */
+.pie {
+    background-color: #d8e0ea;
+}
+
+/* ===== RESPONSIVE - MOBILE ===== */
+@media (max-width: 768px) {
+    /* Header */
+    .tienda-titulo {
+        font-size: 1.4rem;
+    }
+    
+    /* Navegación de materias */
+    .materia-seleccionada-wrapper {
+        margin-left: 0; 
+        margin-top: 20px; 
+        display: block; 
+    }
+
+    .etiqueta-bandera {
+        display: none; 
+    }
+
+    .materias-nav {
+        flex-wrap: wrap; 
+        gap: 10px; 
+        padding-left: 0; 
+        margin-bottom: 15px;
+        justify-content: center; 
+
+    }
+
+    .materia-btn {
+        width: auto; 
+        flex-grow: 1; 
+        padding: 6px ;
+        border-radius: 5px;
+        font-size: 0.75rem;
+    }
+
+    .materia-btn.selected-tab {
+        margin-left: 0; 
+        border-radius: 5px; 
+        padding: 6px;
+        background-color: var(--color-principal-azul); 
+        border: 2px solid #545151;
+    }
+    
+    /* Sección de canjes */
+    .canjes-disponibles {
+        padding: 10px; 
+    }
+
+    .canjes-titulo {
+        margin-top: 10px; 
+        font-size: 1.1rem;
+    }
+    
+    .aviso {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    /* Items de canje - layout vertical */
+    .canje-item {
+        flex-direction: column; 
+        align-items: flex-start;
+        width: 90%;
+        margin: auto;
+        gap: 12px;
+    }
+
+    /* Fecha y puntos juntos en mobile */
+    .canje-fecha-costo-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .canje-fecha {
+        min-width: 50px;
+        font-size: 0.85rem;
+        text-align: left;
+    }
+
+    .canje-costo-mobile {
+        display: flex;
+        font-size: 1.1rem;
+    }
+
+    /* Ocultar puntos de desktop en mobile */
+    .canje-costo-desktop {
+        display: none;
+    }
+    
+    /* Detalles en columna */
+    .canje-detalle {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .canje-nombre {
+        font-size: 1rem;
+    }
+
+    .canje-descripcion {
+        font-size: 0.85rem;
+        border-left: none;
+        padding-left: 0;
+    }
+    
+    /* Botón a ancho completo */
+    .canje-btn {
+        width: 100%; 
+        padding: 10px;
+    }
+}

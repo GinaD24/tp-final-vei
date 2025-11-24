@@ -1,0 +1,178 @@
+.modal-overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9999; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #eef5fd; 
+    border-radius: 12px;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: start;
+    gap: 50px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+
+}
+.contenedor-detalle{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid rgba(157, 155, 155, 0.609);
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2b9d35; 
+    margin: 0;
+    
+}
+
+.modal-puntos-actuales {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--color-estrella); 
+}
+
+.modal-item-titulo {
+    font-size: 1.5rem;
+    color: var(--color-principal-azul);
+    margin-bottom: 5px;
+}
+.item-subtitulo{
+    font-size: 1.3rem;
+    color: grey;
+    margin-bottom: 5px;
+}
+
+.modal-precio {
+    font-size: 1.3rem;
+    color: var(--color-gris-texto);
+    margin-bottom: 50px;
+}
+
+.modal-precio-valor {
+    margin-left: 10px;
+    font-weight: bold;
+    color: var(--color-estrella);
+}
+
+
+
+.modal-actions {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.modal-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    flex-grow: 1;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.modal-btn-secondary {
+    background-color: #a0a0a0; 
+    color: white;
+}
+
+.modal-btn-primary {
+    background-color: var(--color-verde-canjear); 
+    color: white;
+}
+
+.modal-btn-secondary:hover {
+    background-color: #858585;
+}
+
+.modal-btn-primary:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    .modal-content{
+        max-width: 310px;
+        max-height: 310px;
+        padding: 10px;
+    }
+
+        
+    .modal-header {
+        margin-bottom: 15px;
+
+    }
+    .contenedor-detalle{
+        gap: 5px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
+
+    .modal-title {
+        font-size: 0.8rem;
+
+    }
+
+    .modal-puntos-actuales {
+        font-size: 1.1rem;
+    }
+
+    .modal-item-titulo {
+        font-size: 1.2rem;
+
+    }
+    .item-subtitulo{
+        font-size: 1.0rem;
+
+    }
+
+
+    .modal-precio {
+        font-size: 1.0rem;
+        margin-bottom: 50px;
+    }
+
+    .modal-precio-valor {
+        margin-left: 5px;
+
+    }
+
+    .estrella-icon{
+        width: 15px;
+    }
+
+    .modal-actions {
+
+        gap: 10px;
+    }
+
+    .modal-btn {
+        padding: 5px 10px;
+        border-radius: 8px;
+        font-size: 0.8rem;
+
+    }
+}

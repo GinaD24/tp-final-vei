@@ -1,0 +1,146 @@
+.grid-materias {
+    margin-top: 40px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin: 50px;
+}
+
+.titulo-bienvenida {
+    font-size: 20px;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.tarjeta {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: solid 1px #7a7a7a;
+    max-width: 400px;
+}
+
+.tarjeta-cabecera {
+    height: 150px;
+    padding: 15px;
+    position: relative;
+}
+
+.tarjeta-pie {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.tarjeta-pie img {
+    width: 25px;
+    cursor: pointer;
+}
+
+
+.img-materia {
+    width: 100px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+h3 {
+    font-size: 25px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+
+
+.color-verde-claro {
+    background: #b8f46e;
+}
+
+.color-rojo {
+    background: #e87060;
+}
+
+.color-violeta {
+    background: #d1b9ee;
+}
+
+.color-azul {
+    background: #7eb8ff;
+}
+
+.color-naranja {
+    background: rgb(255, 160, 82);
+}
+
+.color-amarillo {
+    background: rgb(252, 255, 100);
+}
+
+.color-celeste{
+    background: #9ac2f3;
+}
+
+
+/*tooltip*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s;
+    
+    position: absolute;
+    bottom: 130%;     
+    left: 50%;
+    transform: translateX(-50%);
+    
+    background: #464646;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+    z-index: 10;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+/* ---------------- RESPONSIVE ---------------- */
+
+
+@media (max-width: 1024px) {
+    .grid-materias {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media (max-width: 768px) {
+
+    .grid-materias {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .tarjeta-cabecera {
+        height: 130px;
+    }
+
+    .img-materia {
+        width: 90px;
+    }
+}

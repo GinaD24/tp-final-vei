@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduClass - Tienda</title>
+    <link rel="icon" href="../educlass.png" type="image/x-icon" />
+
+
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/tienda.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+
+  </head>
+
+  <body>
+
+    <header class="encabezado"></header>
+    <div class="contenedor">
+
+      <aside class="barra-lateral" id="sidebar"></aside>
+
+      <main class="contenido-tienda">
+
+        <section class="header-canjes">
+            <div class="tienda-header">
+            <h1 class="tienda-titulo">Tienda de puntos</h1>
+            <div class="puntos-actuales">
+                <span class="puntos-texto">Tus puntos</span>
+                <span class="puntos-valor" id="puntos-usuario">
+                    <img src="../img/estrella.png" class="estrella-icon" alt="puntos"> 40
+                </span>
+            </div>
+            </div>
+        
+            <div class="materias-wrapper">
+        
+                <div class="materia-seleccionada-wrapper">
+                    <nav class="materias-nav">
+                        <a href="#" class="materia-btn selected-tab">LENGUA</a>
+                        <a href="#" class="materia-btn">BIOLOGÍA</a>
+                        <a href="#" class="materia-btn">FÍSICA</a>
+                        <a href="#" class="materia-btn">QUÍMICA</a>
+                        <a href="#" class="materia-btn">INGLÉS</a>
+                        <a href="#" class="materia-btn">MATEMÁTICA</a>
+                        <a href="#" class="materia-btn">MÚSICA</a>
+                    </nav>
+                    
+                    
+                </div>
+                <div class="etiqueta-bandera"></div>
+            </div>
+
+        </section>
+      
+        <section class="canjes-disponibles">
+          <h1 class="canjes-titulo">CANJES DISPONIBLES</h1>
+          <p class="aviso">Recordá que una vez que canjees el ejercicio ya no tendrás que realizarlo.</p>
+      
+          <div class="lista-canjes">
+            
+                <article class="canje-item">
+                <div class="canje-fecha-costo-wrapper">
+                    <div class="canje-fecha">17/11</div>
+                    <div class="canje-costo canje-costo-mobile">
+                        <img src="../img/estrella-costo.png" alt="" class="estrella-icon"></img> 20
+                    </div>
+                </div>
+                <div class="canje-detalle">
+                    <span class="canje-nombre">Trabajo práctico n° 5</span>
+                    <span class="canje-descripcion">Análisis sintáctico de oraciones complejas</span>
+                </div>
+                <div class="canje-costo canje-costo-desktop">
+                    <img src="../img/estrella-costo.png" alt="" class="estrella-icon"></img> 20
+                </div>
+                <button class="canje-btn">Canjear</button>
+                </article>
+
+                <article class="canje-item">
+                <div class="canje-fecha-costo-wrapper">
+                    <div class="canje-fecha">20/11</div>
+                    <div class="canje-costo canje-costo-mobile">
+                        <img src="../img/estrella-costo.png" alt="" class="estrella-icon"></img> 40
+                    </div>
+                </div>
+                <div class="canje-detalle">
+                    <span class="canje-nombre">Examen Unidad 3</span>
+                    <span class="canje-descripcion">Pregunta sobre recursos literarios y figuras retóricas</span>
+                </div>
+                <div class="canje-costo canje-costo-desktop">
+                    <img src="../img/estrella-costo.png" alt="" class="estrella-icon"></img> 40
+                </div>
+                <button class="canje-btn">Canjear</button>
+                </article>
+
+                <article class="canje-item">
+                <div class="canje-fecha-costo-wrapper">
+                    <div class="canje-fecha">15/11</div>
+                    <div class="canje-costo canje-costo-mobile">
+                        <img src="../img/estrella-costo.png" alt="" class="estrella-icon"></img> 10
+                    </div>
+                </div>
+                <div class="canje-detalle">
+                    <span class="canje-nombre">Trabajo práctico n° 4</span>
+                    <span class="canje-descripcion">Redacción de carta formal</span>
+                </div>
+                <div class="canje-costo canje-costo-desktop">
+                    <img src="../img/estrella-costo.png" alt="" class="estrella-icon"></img> 10
+                </div>
+                <button class="canje-btn">Canjear</button>
+                </article>
+
+                <article class="canje-item">
+                    <div class="canje-fecha-costo-wrapper">
+                        <div class="canje-fecha">12/11</div>
+                        <div class="canje-costo canje-costo-mobile">
+                            <img src="../img/estrella-costo.png" alt="" class="estrella-icon"></img> 15
+                        </div>
+                    </div>
+                    <div class="canje-detalle">
+                        <span class="canje-nombre">Guía de ejercicios 2</span>
+                        <span class="canje-descripcion">Conjugación de verbos irregulares</span>
+                    </div>
+                    <div class="canje-costo canje-costo-desktop">
+                        <img src="../img/estrella-costo.png" alt="" class="estrella-icon"></img> 15
+                    </div>
+                    <button class="canje-btn">Canjear</button>
+                </article>
+
+                <article class="canje-item">
+                    <div class="canje-fecha-costo-wrapper">
+                        <div class="canje-fecha">30/11</div>
+                        <div class="canje-costo canje-costo-mobile">
+                            <img src="../img/estrella-costo.png" alt="" class="estrella-icon"></img> 25
+                        </div>
+                    </div>
+                    <div class="canje-detalle">
+                        <span class="canje-nombre">Examen Unidad 4</span>
+                        <span class="canje-descripcion">Desarrollo: Tipos de textos narrativos</span>
+                    </div>
+                    <div class="canje-costo canje-costo-desktop">
+                        <img src="../img/estrella-costo.png" alt="" class="estrella-icon"></img> 25
+                    </div>
+                    <button class="canje-btn">Canjear</button>
+                </article>
+
+                <article class="canje-item">
+                    <div class="canje-fecha-costo-wrapper">
+                        <div class="canje-fecha">25/11</div>
+                        <div class="canje-costo canje-costo-mobile">
+                            <img src="../img/estrella-costo.png" alt="" class="estrella-icon"></img> 20
+                        </div>
+                    </div>
+                    <div class="canje-detalle">
+                        <span class="canje-nombre">Trabajo práctico n° 6</span>
+                        <span class="canje-descripcion">Lectura y comprensión de texto literario</span>
+                    </div>
+                    <div class="canje-costo canje-costo-desktop">
+                        <img src="../img/estrella-costo.png" alt="" class="estrella-icon"></img> 20
+                    </div>
+                    <button class="canje-btn">Canjear</button>
+                    </article>
+            
+            </div>
+        </section>
+      
+
+        <div id="modal-container"></div>
+      </main>
+
+      <footer class="pie"></footer>
+    </div>
+
+
+
+    <script src="../js/sidebar-loader.js"></script>
+    <script src="../js/header-loader.js"></script>
+    <script src="../js/footer-loader.js"></script>
+    <script src="../js/modal-tienda.js"></script>
+  </body>
+</html>

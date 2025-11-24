@@ -1,0 +1,488 @@
+/* ------------------------------ */
+/* CONTENIDO */
+/* ------------------------------ */
+
+.content {
+    margin-left: 100px;
+    padding: 30px;
+}
+
+.titulo-calendario {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.filtro {
+    background: #d8e0ea;
+    color: #333;
+    border: 1px solid #a0a0a0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+
+/* ------------------------------ */
+/* CALENDARIO */
+/* ------------------------------ */
+
+.calendar {
+    background: white;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #c2deff;
+    overflow-x: auto;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.nav-mes {
+    background: #2a5bd7;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.nav-mes:hover {
+    background: #1e4bbd;
+}
+
+.flecha-nav {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.mes {
+    text-align: center;
+    color: #2a5bd7;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.tabla-calendario {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-calendario th {
+    padding: 12px;
+    text-align: center;
+    color: #333;
+    font-size: 13px;
+    background: #f2f4f7;
+    border: 1px solid #c2deff;
+}
+
+.tabla-calendario td {
+    padding: 18px;
+    text-align: center;
+    border: 1px solid #c2deff;
+    background: white;
+    font-size: 16px;
+    transition: 0.2s ease;
+    position: relative;
+    color: #333;
+}
+
+.tabla-calendario td:hover {
+    background: #f2f4f7;
+    cursor: pointer;
+}
+
+
+/* ------------------------------ */
+/* EVENTOS ESTILO TARJETAS */
+/* ------------------------------ */
+
+.info {
+    margin-top: 8px;
+    padding: 6px 8px;
+    font-size: 12px;
+    border-radius: 6px;
+    text-align: left;
+    color: white;
+    line-height: 1.2;
+    background: #e3e8ef;
+}
+
+.info strong {
+    font-size: 13px;
+    color: #333;
+}
+
+
+/* ------------------------------ */
+/* COLORES SEGÚN TIPO */
+/* ------------------------------ */
+
+/* Evaluaciones → rojo */
+.evaluacion .info {
+    background: #e87060;
+    border-left: 4px solid #d9534f;
+    color: white;
+}
+
+/* Entregas → azul */
+.entrega .info {
+    background: #5b8aeb;
+    border-left: 4px solid #2a5bd7;
+    color: white;
+}
+
+/* Hover */
+.evaluacion:hover,
+.entrega:hover {
+    background-color: #f2f4f7 !important;
+}
+
+/* ------------------------------ */
+/* ASISTENCIAS (BOLITAS) */
+/* ------------------------------ */
+
+.asistencia-dia {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6px auto 0 auto;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    cursor: default;
+    transition: transform 0.2s ease;
+}
+
+.asistencia-dia:hover {
+    transform: scale(1.15);
+}
+
+/* Colores */
+.presente {
+    background: #4CAF50;
+    /* verde */
+}
+
+.ausente {
+    background: #d9534f;
+    /* rojo */
+}
+
+.tarde {
+    background: #f0ad4e;
+    /* naranja */
+}
+
+.justificada {
+    background: #5bc0de;
+    /* celeste */
+}
+
+/* ------------------------------ */
+/* LEYENDA DE ASISTENCIAS */
+/* ------------------------------ */
+
+.leyenda-asistencias {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #c2deff;
+    margin-top: 30px;
+    display: none;
+    box-sizing: border-box;
+}
+
+.leyenda-asistencias.visible {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.leyenda-seccion {
+    display: flex;
+    flex-direction: column;
+}
+
+.leyenda-seccion h3 {
+    font-size: 14px;
+    color: #2a5bd7;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.leyenda-items-horizontal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.leyenda-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.dot.presente {
+    background: #4CAF50;
+}
+
+.dot.ausente {
+    background: #d9534f;
+}
+
+.dot.tarde {
+    background: #f0ad4e;
+}
+
+.dot.justificada {
+    background: #5bc0de;
+}
+
+/* Contador de asistencias */
+.contador-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.contador-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.contador-numero {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.contador-numero.presente-count {
+    color: #4CAF50;
+}
+
+.contador-numero.ausente-count {
+    color: #d9534f;
+}
+
+.contador-numero.tarde-count {
+    color: #f0ad4e;
+}
+
+.contador-numero.justificada-count {
+    color: #5bc0de;
+}
+
+.contador-label {
+    font-size: 11px;
+    color: #666;
+    text-align: center;
+}
+
+/* Faltas totales */
+.faltas-totales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #fff9e6;
+    border-radius: 8px;
+    border: 2px solid #ffe8a3;
+}
+
+.faltas-numero {
+    font-size: 32px;
+    font-weight: 700;
+    color: #d4a000;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.faltas-label {
+    font-size: 13px;
+    color: #9d7a00;
+    font-weight: 600;
+}
+
+/* Aclaración de cálculo */
+.aclaracion-calculo {
+    background: #e8f4f8;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #b8d4f1;
+}
+
+.aclaracion-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.aclaracion-lista li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 4px;
+    padding-left: 8px;
+}
+
+.aclaracion-lista li strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* ------------------------------ */
+/* RESPONSIVE */
+/* ------------------------------ */
+
+@media (max-width: 1024px) {
+    .leyenda-asistencias.visible {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .calendar {
+        padding: 15px;
+    }
+
+    .calendar-header {
+        gap: 20px;
+    }
+
+    .mes {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+
+    .nav-mes {
+        width: 35px;
+        height: 35px;
+    }
+
+    .flecha-nav {
+        width: 16px;
+        height: 16px;
+    }
+
+    .tabla-calendario th,
+    .tabla-calendario td {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .leyenda-asistencias {
+        padding: 20px;
+    }
+
+    .leyenda-asistencias.visible {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contador-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-calendario {
+        font-size: 18px;
+    }
+
+    .filtro {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .calendar {
+        padding: 10px;
+    }
+
+    .mes {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+    .nav-mes {
+        width: 30px;
+        height: 30px;
+    }
+
+    .flecha-nav {
+        width: 14px;
+        height: 14px;
+    }
+
+    .tabla-calendario {
+        min-width: 600px;
+    }
+
+    .tabla-calendario th,
+    .tabla-calendario td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .leyenda-asistencias {
+        padding: 15px;
+    }
+
+    .leyenda-seccion h3 {
+        font-size: 13px;
+    }
+
+    .contador-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .contador-numero {
+        font-size: 20px;
+    }
+
+    .faltas-numero {
+        font-size: 28px;
+    }
+}

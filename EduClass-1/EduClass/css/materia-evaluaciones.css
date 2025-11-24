@@ -1,0 +1,54 @@
+/* Contenedor */
+.tabla-container {
+  width: 100%;
+  overflow-x: auto;
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+}
+
+/* Tabla */
+.tabla-evaluaciones {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+/* Encabezados */
+.tabla-evaluaciones thead th {
+  text-align: left;
+  padding: 10px;
+  background: #f3f3f3;
+  border-bottom: 2px solid #ddd;
+  font-size: 14px;
+}
+
+/* Filas */
+.tabla-evaluaciones td {
+  padding: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+/* Links */
+.temas {
+  color: #007b5b;
+  font-size: 13px;
+}
+
+/* Estado */
+.estado.aprobado {
+  color: #0a8f00;
+  font-weight: bold;
+}
+.estado.desaprobado {
+  color: crimson;
+  font-weight: bold;
+}
+
+/* Nota */
+.nota {
+  text-align: center;
+  font-weight: bold;
+}
+
