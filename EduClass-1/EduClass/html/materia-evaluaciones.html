@@ -26,69 +26,121 @@
           </div>
         </section>
 
-<div class="tabla-container">
-  <table class="tabla-evaluaciones">
-    <thead>
-      <tr>
-        <th>Evaluación</th>
-        <th>Fecha</th>
-        <th>Condición</th>
-        <th>Calificación</th>
-      </tr>
-    </thead>
+        <!-- Tabs de navegación -->
+        <nav class="tabs">
+          <button class="tab">Trimestre I</button>
+          <button class="tab">Trimestre II</button>
+          <button class="tab active">Trimestre III</button>
+        </nav>
 
-    <tbody>
-      <tr>
-        <td>
-          <strong>EVALUACIÓN FINAL: Sistemas del cuerpo humano</strong><br>
-          <p class="temas">III Trimestre</p>
-        </td>
-        <td>01/11/2025</td>
-        <td class="estado aprobado">APROBADO</td>
-        <div>
-        <td class="nota">9</td>
-      </tr>
-       <tr>
-        <td>
-          <strong>EVALUACIÓN 3: Genética y biología molecular </strong><br>
-          <p class="temas">II Trimestre </p>
-        </td>
-        <td>21/08/2025</td>
-        <td class="estado aprobado">APROBADO</td>
-        <td class="nota">7</td>
-      </tr>
-      <tr>
-        <td>
-          <strong>RECUPERATORIO EVALUACIÓN 2 </strong><br>
-          <p class="temas">I Trimestre</p>
-        </td>
-        <td>22/05/2025</td>
-        <td class="estado aprobado">APROBADO</td>
-        <td class="nota">10</td>
-      </tr>
+        <!-- Tabla de evaluaciones -->
+        <div class="tabla-container">
+          <table class="tabla-evaluaciones">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Evaluación</th>
+                <th>Condición</th>
+                <th>Calificación</th>
+              </tr>
+            </thead>
 
-      <tr>
-        <td>
-          <strong>EVALUACIÓN 2: Ecosistemas</strong><br>
-          <p class="temas">I Trimestre</p>
-        </td>
-        <td>15/05/2025</td>
-        <td class="estado desaprobado">DESAPROBADO</td>
-        <td class="nota">5</td>
-      </tr>
+            <tbody>
+              <tr>
+                <td class="fecha-cell">01/11/2025</td>
+                <td><strong>EVALUACIÓN FINAL: Sistemas del cuerpo humano</strong></td>
+                <td><span class="estado-badge aprobado">APROBADO</span></td>
+                <td class="nota-cell"><span class="nota aprobado">9</span></td>
+              </tr>
 
-      <tr>
-        <td>
-          <strong>EVALUACIÓN 1: Diagnóstico</strong><br>
-          <p class="temas">I Trimestre</p>
-        </td>
-        <td>12/03/2025</td>
-        <td class="estado aprobado">APROBADO</td>
-        <td class="nota">8</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+              <tr>
+                <td class="fecha-cell">21/08/2025</td>
+                <td><strong>EVALUACIÓN 3: Genética y biología molecular</strong></td>
+                <td><span class="estado-badge aprobado">APROBADO</span></td>
+                <td class="nota-cell"><span class="nota aprobado">7</span></td>
+              </tr>
+
+              <tr>
+                <td class="fecha-cell">22/05/2025</td>
+                <td><strong>RECUPERATORIO EVALUACIÓN 2</strong></td>
+                <td><span class="estado-badge aprobado">APROBADO</span></td>
+                <td class="nota-cell"><span class="nota aprobado">10</span></td>
+              </tr>
+
+              <tr>
+                <td class="fecha-cell">15/05/2025</td>
+                <td><strong>EVALUACIÓN 2: Ecosistemas</strong></td>
+                <td><span class="estado-badge desaprobado">DESAPROBADO</span></td>
+                <td class="nota-cell"><span class="nota desaprobado">5</span></td>
+              </tr>
+
+              <tr>
+                <td class="fecha-cell">12/03/2025</td>
+                <td><strong>EVALUACIÓN 1: Diagnóstico</strong></td>
+                <td><span class="estado-badge aprobado">APROBADO</span></td>
+                <td class="nota-cell"><span class="nota aprobado">8</span></td>
+              </tr>
+            </tbody>
+
+            <tfoot>
+              <tr class="promedio-row">
+                <td class="promedio-oculto"></td>
+                <td class="promedio-label"><strong>PROMEDIO TRIMESTRE III</strong></td>
+                <td class="promedio-oculto"></td>
+                <td class="nota-cell"><span class="nota promedio">9.0</span></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <!-- Información de estados -->
+        <div class="info-evaluaciones">
+          <div class="info-seccion-eval">
+            <h3>📊 Estados de evaluaciones</h3>
+            <div class="estados-lista">
+              <div class="estado-item">
+                <span class="estado-dot aprobado"></span>
+                <span><strong>Aprobado:</strong> Nota de 7 a 10</span>
+              </div>
+              <div class="estado-item">
+                <span class="estado-dot desaprobado"></span>
+                <span><strong>Desaprobado:</strong> Nota de 4 a 6</span>
+              </div>
+              <div class="estado-item">
+                <span class="estado-dot aplazo"></span>
+                <span><strong>Aplazo:</strong> Nota menor a 4</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-seccion-eval">
+            <h3>ℹ️ Información importante</h3>
+            <ul>
+              <li>Las notas se registran en escala de 1 a 10</li>
+              <li>Para aprobar necesitas una nota mínima de 7</li>
+              <li>Las evaluaciones desaprobadas pueden recuperarse</li>
+              <li>Consultá con tu docente en caso de dudas</li>
+            </ul>
+          </div>
+
+          <div class="info-seccion-eval">
+            <h3>📈 Resumen académico</h3>
+            <div class="resumen-notas">
+              <div class="resumen-item">
+                <span class="resumen-num">4</span>
+                <span class="resumen-txt">Aprobadas</span>
+              </div>
+              <div class="resumen-item">
+                <span class="resumen-num">1</span>
+                <span class="resumen-txt">Desaprobadas</span>
+              </div>
+              <div class="resumen-item">
+                <span class="resumen-num">7.8</span>
+                <span class="resumen-txt">Promedio</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </main>
     </div>
